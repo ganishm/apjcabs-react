@@ -1,0 +1,126 @@
+/* Hero Section */
+.hero-section {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg, #E6F7FE, #FEEDE5);
+  position: relative;
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Adjust the banner container to ensure proper sizing */
+.banner-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow of image outside the container */
+}
+
+/* Set the image to fit the banner container */
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure the image scales properly */
+  max-height: 100%; /* Ensure it fits within the container's height */
+  margin: 0 auto;
+  filter: brightness(40%);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Text color */
+  font-size: 36px;
+  font-weight: bold;
+  z-index: 2; /* Ensures the text is above the image */
+}
+
+.banner-text p {
+  font-size: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.banner-text h1 {
+  font-size: 48px;
+  filter: brightness(100%);
+}
+
+.banner-text h1 span {
+  color: #18B2D3; /* Color for "Us" */
+}
+
+.tariff-section {
+    background-color: #f9f9f9;
+  }
+  
+  .table th {
+    background-color: #1b9dc5;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .car-image {
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  .btn-tariff {
+    background-color: #1b9dc5;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .btn-tariff:hover {
+    background-color: #0f7c97;
+  }
+  
+  @media (max-width: 767px) {
+    .car-image {
+      width: 150px;
+    }
+  
+    .table th, .table td {
+      font-size: 0.9rem;
+    }
+  }
+
+/* Custom style for better form alignment */
+.modal-content {
+  padding: 20px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-body {
+  padding-top: 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Hide the form once booking is successful */
+.hidden {
+  display: none;
+}
+
+/* Confirmation message styling */
+.confirmation-message {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+}

@@ -1,0 +1,398 @@
+import React from 'react'
+import './CarRentals.css'
+
+const CarRentals = () => {
+  return (
+   <>
+   <section className="hero-section text-center position-relative">
+        <div className="banner-container">
+          <div className="banner-image">
+            <img src="images/banner_all.png" alt="Car Banner" className="img-fluid hero-image"/>
+          </div>
+          <div className="banner-text">
+            <h1>Our <span>Clients</span></h1>
+          </div>
+        </div>
+      </section>
+      
+<div id="scrollTopBtn" className="scroll-top d-flex justify-content-center align-items-center">
+    <i className="fas fa-arrow-up"></i>
+</div>
+    <section className="bg-light py-5">
+        <div className="container">
+            <div className="row">
+               
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/altis.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Corolla Altis</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 2000 <br/> 8 Hour and 80 Kms Rs 4000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/toyota-corolla/toyato-corolla.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+               
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/camry.jpg" className="card-img-top" alt="Mercedes Benz E-className"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Camry Hybrid</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 4500 <br/> 8 Hour and 80 Kms Rs 9000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Petrol</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Auto</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/toyota-camry/camry.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/audia6.jpg" className="card-img-top" alt="Range Rover Sport 5.5"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Audi A6</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 6000 <br/> 8 Hour and 80 Kms Rs 12000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 5 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Petrol</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Auto</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/audi-a6/audi-a6.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/bmw5series.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">BMW 5 Series</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 6000 <br/> 8 Hour and 80 Kms Rs 12000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/bmw/bmw.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/audiq7.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Audi Q7</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 9000 <br/> 8 Hour and 80 Kms Rs 18000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/audi-q7/audi-q7.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/mercedes_benz_e_class.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Mercedes Benz E className</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 6000 <br/> 8 Hour and 80 Kms Rs 12000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/benz-e/benz-e.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/mercedes_benz_s_class.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Mercedes Benz S className New</h5>
+                            <p className="card-text">8 Hour and 80 Kms Rs 25000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/benz-s/benz-s.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/toyota-vellfire.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Vellfire</h5>
+                            <p className="card-text">8 Hour and 80 Kms Rs 22000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/toyota-vellfire/vellfire.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Jaguar_XF.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Jaguar XF</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 7000 <br/>
+                                8 Hour and 80 Kms Rs 13000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/jaguar-xf/jaguar-xf.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Jaguar_XJL.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Jaguar XJL</h5>
+                            <p className="card-text">8 Hour and 80 Kms Rs 20000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/jagura-xjl/jaguar-xjl.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/carnival.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">KIA Carnival</h5>
+                            <p className="card-text">8 Hour and 80 Kms Rs 5000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/carnival/carnival.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Rolls_Royce_Ghost.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Rolls Royce Ghost</h5>
+                            <p className="card-text">8 Hour and 80 Kms Rs 100000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/rolls-royce/rolls-royce.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Toyota_Innova.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Innova</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 1800 <br/>
+                                8 Hour and 80 Kms Rs 3600</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/toyota-innova/innova.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Toyota_Innova_Crysta.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Innova Crysta G Model</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 2200 <br/>
+                                8 Hour and 80 Kms Rs 4400</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/crysta-g/crysta-g.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Toyota_Innova_Crysta.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Innova Crysta Z Model</h5>
+                            <p className="card-text">8 Hour and 80 Kms Rs 4800</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/crysta-z/crysta-z.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Toyota_Fortuner.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Toyota Fortuner</h5>
+                            <p className="card-text">4 Hour and 40 Kms Rs 4000 <br/>
+                                8 Hour and 80 Kms Rs 8000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/fortuner/fortuner.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/Volvo_Bus.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Volvo Bus</h5>
+                            <p className="card-text">1 day Out of chennai With 300 kms 23500 <br/>
+                                1 day With in Chennai 150 kms 21000</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/volvo/volvo.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 mb-4">
+                    <div className="card custom-card h-100 border-0 shadow-sm">
+                        <a href="#">
+                            <img src="images/carRentals/yatch.jpg" className="card-img-top" alt="Cadillac Limousine XTS"/>
+                        </a>
+                        <div className="card-body custom-body text-center">
+                            <h5 className="card-title">Yacht</h5>
+                            <p className="card-text">Customized On Request</p>
+                            <ul className="list-unstyled d-flex justify-content-center mb-3">
+                                <li className="mx-2 feature-box"><i className="fas fa-user"></i> 4 seats</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-gas-pump"></i> Diesel</li>
+                                <li className="mx-2 feature-box"><i className="fas fa-cogs"></i> Mechanic</li>
+                            </ul>
+                        </div>
+                        <div className="card-footer custom-footer d-flex justify-content-center align-items-center">
+                            <a href="../car-details/yacht/yacht.html" className="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   </>
+  )
+}
+
+export default CarRentals

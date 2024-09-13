@@ -1,0 +1,204 @@
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #E6F7FE, #FEEDE5);
+    position: relative;
+    text-align: center; /* Center the image horizontally */
+}
+
+/* Adjust the banner container to ensure proper sizing */
+.banner-container {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no overflow of image outside the container */
+}
+
+/* Set the image to fit the banner container */
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the image scales properly */
+    max-height: 100%; /* Ensure it fits within the container's height */
+    margin: 0 auto;
+    filter: brightness(40%);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color */
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 2; /* Ensures the text is above the image */
+  }
+  
+  .banner-text p {
+    font-size: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .banner-text h1 {
+    font-size: 48px;
+    filter: brightness(100%);
+  }
+  
+  .banner-text h1 span {
+    color: #18B2D3; /* Color for "Us" */
+  }
+
+  .contact-banner {
+    position: relative;
+    padding: 50px 0;
+}
+
+.contact-info-boxes {
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.contact-box {
+    background-color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box:hover {
+    transform: translateY(-10px);
+    background-color: #18B2D3; /* Change this color as needed */
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box h5, .contact-box p {
+    margin: 10px 0;
+}
+
+.contact-box .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #333; /* Orange color for icons */
+}
+
+.contact-box .icon::after{
+    color: #ffffff;
+}
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #E1F1F9;
+}
+
+.contact-form, 
+.contact-map {
+    padding: 20px;
+}
+
+.contact-form h2,
+.contact-map h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+}
+
+textarea {
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    height: 150px;
+    resize: none;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    background-color: #18B2D3;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0c6e85;
+}
+
+.contact-map iframe {
+    border-radius: 20px;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #18B2D3; /* Orange border color */
+    border-radius: 50%;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-top i {
+    color: #18B2D3; /* Arrow color */
+    font-size: 20px;
+}
+
+.scroll-top.show {
+    display: flex;
+    background-color: #18B2D3; /* Orange background when scrolling */
+    border-radius: 25%;
+}
+
+.scroll-top.show i {
+    color: #fff; /* White arrow when active */
+}
+
+.contact_list p{
+    min-height:50px;
+
+}
+
+@media only screen and (max-width:550px){
+    .banner-text{
+        display: none;
+    }
+
+}

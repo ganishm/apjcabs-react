@@ -1,0 +1,128 @@
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #E6F7FE, #FEEDE5);
+    position: relative;
+    text-align: center; /* Center the image horizontally */
+}
+
+/* Adjust the banner container to ensure proper sizing */
+.banner-container {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no overflow of image outside the container */
+}
+
+/* Set the image to fit the banner container */
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the image scales properly */
+    max-height: 100%; /* Ensure it fits within the container's height */
+    margin: 0 auto;
+    filter: brightness(40%);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color */
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 2; /* Ensures the text is above the image */
+  }
+  
+  .banner-text p {
+    font-size: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .banner-text h1 {
+    font-size: 48px;
+    filter: brightness(100%);
+  }
+  
+  .banner-text h1 span {
+    color: #18B2D3; /* Color for "Us" */
+  }
+  /* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #18B2D3; /* Orange border color */
+    border-radius: 50%;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-top i {
+    color: #18B2D3; /* Arrow color */
+    font-size: 20px;
+}
+
+.scroll-top.show {
+    display: flex;
+    background-color: #18B2D3; /* Orange background when scrolling */
+    border-radius: 25%;
+}
+
+.scroll-top.show i {
+    color: #fff; /* White arrow when active */
+}
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+/* Card Section */
+.card.custom-card {
+    border: 2px dashed #ccc; /* Dashed border */
+}
+.feature-box {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+}
+.card-footer.custom-footer {
+    background-color: #f8f9fa; /* Light gray background */
+}
+.card-body.custom-body {
+    padding: 15px;
+    background-color: #566e7822;
+}
+
+.card-img-top{
+    width:416px;
+}
+
+.custom-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Scale up the card slightly */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add more shadow for emphasis */
+}

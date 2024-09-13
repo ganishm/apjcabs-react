@@ -1,0 +1,278 @@
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(135deg, #E6F7FE, #FEEDE5);
+    position: relative;
+    text-align: center; /* Center the image horizontally */
+}
+
+/* Adjust the banner container to ensure proper sizing */
+.banner-container {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no overflow of image outside the container */
+}
+
+/* Set the image to fit the banner container */
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the image scales properly */
+    max-height: 100%; /* Ensure it fits within the container's height */
+    margin: 0 auto;
+    filter: brightness(40%);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color */
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 2; /* Ensures the text is above the image */
+  }
+  
+  .banner-text p {
+    font-size: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .banner-text h1 {
+    font-size: 48px;
+    filter: brightness(100%);
+  }
+  
+  .banner-text h1 span {
+    color: #18B2D3; /* Color for "Us" */
+  }
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #18B2D3; /* Orange border color */
+    border-radius: 50%;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-top i {
+    color: #18B2D3; /* Arrow color */
+    font-size: 20px;
+}
+
+.scroll-top.show {
+    display: flex;
+    background-color: #18B2D3; /* Orange background when scrolling */
+    border-radius: 25%;
+}
+
+.scroll-top.show i {
+    color: #fff; /* White arrow when active */
+}
+
+/* Stats Section */
+
+.stats-section {
+    background-color: #18B2D3; /* Background color matching the original image */
+}
+
+.stat-box {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F4FB 100%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #18B2D3; /* Blue color for numbers */
+    margin: 0;
+}
+
+.plus-sign {
+    color: #F9B668; /* Yellow color for plus sign */
+    font-size: 36px;
+}
+
+@media (max-width: 768px) {
+    .stat-box {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Our Service Section */
+
+.landing-section {
+    background-color: #fff;
+}
+
+.landing-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.small-text {
+    color: #E63946;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 8px;
+    background-color: #FF0066;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 8px;
+    background-color: #FFCE00;
+    bottom: -10px;
+    left: 0;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.my-btn {
+    background-color: #18B2D3;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.discover-btn {
+    border-color: #18B2D3;
+    color: #000;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+
+    .buttons .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .landing-img {
+        margin-bottom: 20px;
+    }
+}
+
+/* Form Section */
+
+.booking-section {
+    background-color: #f9f9f9;
+  }
+  
+  .booking-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f1f1f;
+  }
+  
+  .booking-section .highlight {
+    color: #18B2D3;
+  }
+  
+  .booking-section p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .booking-section .contact-info {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1f1f1f;
+    margin-top: 20px;
+  }
+  
+  .form-background {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-background .form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #ddd;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .form-background .form-control:focus {
+    border-bottom: 2px solid #18B2D3;
+    box-shadow: none;
+  }
+  
+  .btn-book {
+    background-color: #18B2D3;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+  
+  .btn-book:hover {
+    background-color: #1596a7;
+  }
+  
+  @media (max-width: 767px) {
+    .booking-section h2 {
+      font-size: 2rem;
+    }
+  
+    .form-background {
+      padding: 20px;
+    }
+  }
