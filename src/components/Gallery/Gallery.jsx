@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './Gallery.css'; // Import your styles
+import './Gallery.css';
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 const Gallery = () => {
   const [fullImg, setFullImg] = useState('');
@@ -28,10 +30,11 @@ const Gallery = () => {
 
   return (
     <>
+    <Header/>
       {/* Hero Section */}
-      <section className="hero-section text-center position-relative">
+      <section className="gallery-hero-section text-center position-relative">
         <div className="banner-container">
-          <div className="banner-image">
+          <div className="gallery-banner-image">
             <img src="/images/banner_all.png" alt="Car Banner" className="img-fluid hero-image" />
           </div>
           <div className="banner-text">
@@ -88,6 +91,7 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

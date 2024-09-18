@@ -17,7 +17,7 @@
 }
 
 /* Set the image to fit the banner container */
-.hero-image {
+.contact-hero-image {
     width: 100%;
     height: auto;
     object-fit: contain; /* Ensure the image scales properly */

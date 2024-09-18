@@ -8,7 +8,7 @@ body{
 }
 
 /* Hero Section */
-.hero-section {
+.gallery-hero-section {
   background-color: #f8f9fa;
   background-image: linear-gradient(135deg, #E6F7FE, #FEEDE5);
   position: relative;

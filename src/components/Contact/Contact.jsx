@@ -1,13 +1,15 @@
 import React from 'react';
-import './Contact.css'; // Import the CSS file for styling
+import './Contact.css';
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 const Contact = () => {
     return (
         <>
-            {/* Hero Section */}
-            <section className="hero-section text-center position-relative">
+        <Header />
+            <section className="contact-hero-section text-center position-relative">
                 <div className="banner-container">
-                    <div className="banner-image">
+                    <div className="contact-banner-image">
                         <img src="/images/banner_all.png" alt="Car Banner" className="img-fluid hero-image" />
                     </div>
                     <div className="banner-text">
@@ -28,28 +30,28 @@ const Contact = () => {
                     <div className="row" style={{ position: 'relative', marginTop: '-100px', marginBottom: '0px' }}>
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="contact-box p-4 text-center">
-                                <i className="fas fa-envelope icon"></i>
+                                <i className="fa fa-envelope icon"></i>
                                 <h5>Email us</h5>
                                 <p>cars@apjcabs.com</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="contact-box p-4 text-center">
-                                <i className="fas fa-map-marker-alt icon"></i>
+                                <i className="fa fa-map-marker icon"></i>
                                 <h5>Our address</h5>
                                 <p>No: 2/11, 51st Street, Ashok Nagar, Chennai - 600 083</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="contact-box p-4 text-center">
-                                <i className="fas fa-clock icon"></i>
+                                <i className="fa fa-clock-o icon"></i>
                                 <h5>Opening Hours</h5>
                                 <p>Mon-Sun: 8 AM - 7 PM</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="contact-box p-4 text-center">
-                                <i className="fas fa-phone icon"></i>
+                                <i className="fa fa-phone icon"></i>
                                 <h5>Call us</h5>
                                 <p>+91 9677 111 999</p>
                             </div>
@@ -92,6 +94,7 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </>
     );
 }

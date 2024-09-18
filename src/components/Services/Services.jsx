@@ -1,13 +1,56 @@
-import React from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
 import "./Services.css";
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 const Services = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        pickUpTime: '',
+        returnTime: '',
+        vehicleType: '',
+      });
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        axios.post('http://localhost:5000/send-booking', formData)
+          .then(response => {
+            console.log(response.data);
+            
+            // Show the confirmation modal on successful submission
+            const confirmationModal = new window.bootstrap.Modal(document.getElementById('confirmationModal'));
+            confirmationModal.show();
+            
+            // Optionally reset the form after submission
+            setFormData({
+              name: '',
+              phone: '',
+              email: '',
+              pickUpTime: '',
+              returnTime: '',
+              vehicleType: '',
+            });
+          })
+          .catch(error => {
+            console.error('There was an error sending the booking!', error);
+          });
+      };
   return (
     <>
+    <Header />
       
-    <section className="hero-section text-center position-relative">
+    <section className="service-hero-section text-center position-relative">
         <div className="banner-container">
-          <div className="banner-image">
+          <div className="service-banner-image">
             <img src="/images/banner_all.png" alt="Car Banner" className="img-fluid hero-image" />
           </div>
           <div className="banner-text">
@@ -192,63 +235,110 @@ const Services = () => {
         </div>
     </section>
 
-<section className="booking-section py-5">
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-lg-6 mb-4 mb-lg-0">
-          <h2>Use our <span className="highlight">quick booking form</span> to get a vehicle</h2>
-          <p>
-            Fill out the form to quickly book a vehicle for your journey. Choose your preferred vehicle type and time for a smooth experience.
-          </p>
-          <p className="contact-info">
-            <i className="fas fa-phone"></i> Call for booking: <strong>(+91) 9677111999</strong>
-          </p>
-        </div>
-        <div className="col-lg-6">
-          <div className="form-background p-4">
-            <form id="bookingForm">
-                <div className="form-group mb-3">
-                    <input type="text" className="form-control" placeholder="Name" required/>
-                </div>
-                <div className="form-group mb-3">
-                    <input type="tel" className="form-control" placeholder="Phone Number" required/>
-                </div>
-                <div className="form-group mb-3">
-                    <input type="email" className="form-control" placeholder="Email" required/>
-                </div>
-                <div className="form-group mb-3">
-                    <input type="datetime-local" className="form-control" placeholder="Pickup Time" required/>
-                </div>
-                <div className="form-group mb-3">
-                    <input type="datetime-local" className="form-control" placeholder="Return Time" required/>
-                </div>
-                <div className="form-group mb-3">
-                    <select className="form-control" required>
-                        <option value="" disabled selected>Select Vehicle Type</option>
-                        <option>Car</option>
-                        <option>SUV</option>
-                        <option>Van</option>
-                        <option>Luxury</option>
+    <section className="booking-section py-5">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 mb-4 mb-lg-0">
+              <h2>Use our <span className="highlight">quick booking form</span> to get a vehicle</h2>
+              <p>
+                Fill out the form to quickly book a vehicle for your journey. Choose your preferred vehicle type and time for a smooth experience.
+              </p>
+              <p className="contact-info">
+                <i className="fa fa-phone"></i> Call for booking: <strong>(+91) 9677111999</strong>
+              </p>
+            </div>
+            <div className="col-lg-6">
+              <div className="form-background p-4">
+                <form onSubmit={handleSubmit} id="bookingForm">
+                  <div className="form-group mb-3">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group mb-3">
+                    <input
+                      type="tel"
+                      className="form-control"
+                      placeholder="Phone Number"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group mb-3">
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group mb-3">
+                    <input
+                      type="datetime-local"
+                      className="form-control"
+                      name="pickUpTime"
+                      value={formData.pickUpTime}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group mb-3">
+                    <input
+                      type="datetime-local"
+                      className="form-control"
+                      name="returnTime"
+                      value={formData.returnTime}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group mb-3">
+                    <select
+                      className="form-control"
+                      name="vehicleType"
+                      value={formData.vehicleType}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="" disabled>Select Vehicle Type</option>
+                      <option value="Luxury">Luxury</option>
+                      <option value="7 Seater">7 Seater</option>
+                      <option value="5 Seater">5 Seater</option>
+                      <option value="Bus">Bus</option>
+                      <option value="Yacht">Yacht</option>
                     </select>
-                </div>
-                <button type="submit" className="btn btn-primary btn-block">Book Now</button>
-            </form>
+                  </div>
+                  <button type="submit" className="btn btn-primary btn-block">Book Now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Confirmation Modal */}
+      <div className="modal fade" id="confirmationModal" tabIndex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-body">
+              <h5>The car has been booked, we will contact you soon!</h5>
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-<div className="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-    <div className="modal-dialog">
-      <div className="modal-content">
-        <div className="modal-body text-center">
-          <h5>The car has been booked, we will contact you soon!</h5>
-          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Footer/>
     </>
   );
 };

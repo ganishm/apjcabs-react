@@ -167,8 +167,8 @@ color:#ff0000;
   left: 50px;
 }
 
-@media only screen and (min-width:671px){
+@media only screen and (min-width:437px){
   .footer-content{
-    margin-right: 50px;
+    left: 10px;
   }
 }

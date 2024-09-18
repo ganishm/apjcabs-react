@@ -1,14 +1,58 @@
-import React from "react"
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Tariff.css'
 
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
+
 const Tariff = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    carType: '',
+    pickUpDate: '',
+    returnDate: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Send booking data to the server
+    axios.post('http://localhost:5000/send-booking', formData)
+      .then(response => {
+        console.log(response.data);
+        
+        // Show the confirmation modal on successful submission
+        const confirmationModal = new window.bootstrap.Modal(document.getElementById('confirmationModal'));
+        confirmationModal.show();
+        
+        // Optionally reset the form after submission
+        setFormData({
+          name: '',
+          email: '',
+          mobile: '',
+          carType: '',
+          pickUpDate: '',
+          returnDate: '',
+        });
+      })
+      .catch(error => {
+        console.error('There was an error sending the booking!', error);
+      });
+  };
     return (
 
         <>
-        
-        <section className="hero-section text-center position-relative">
+        <Header/>
+        <section className="tariff-hero-section text-center position-relative">
       <div className="banner-container">
-        <div className="banner-image">
+        <div className="tariff-banner-image">
           <img src="/images/banner_all.png" alt="Car Banner" className="img-fluid hero-image"/>
         </div>
         <div className="banner-text">
@@ -237,57 +281,104 @@ const Tariff = () => {
   </div>
 </section>
 
+{/* Booking Form Modal */}
 <div className="modal fade" id="bookingModal" tabIndex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h5 className="modal-title" id="bookingModalLabel">Book Your Car</h5>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="bookingModalLabel">Book Your Car</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="mobile"
+                    className="form-control"
+                    placeholder="Mobile Number"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <select
+                    className="form-control"
+                    name="carType"
+                    value={formData.carType}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled>Preferred Car Type</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="7seater">7 Seater</option>
+                    <option value="5seater">5 Seater</option>
+                    <option value="bus">Bus</option>
+                    <option value="yacht">Yacht</option>
+                  </select>
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="date"
+                    className="form-control"
+                    name="pickUpDate"
+                    value={formData.pickUpDate}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="date"
+                    className="form-control"
+                    name="returnDate"
+                    value={formData.returnDate}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary">Book Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="modal-body">
-        <form id="bookingForm" action="#" method="POST">
-          <div className="mb-3">
-            <input type="text" className="form-control" placeholder="Name" id="name" required />
+
+      {/* Confirmation Modal */}
+      <div className="modal fade" id="confirmationModal" tabIndex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-body">
+              <h5>The car has been booked, we will contact you soon!</h5>
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
-          <div className="mb-3">
-            <input type="email" className="form-control" placeholder="Email" id="email" required />
-          </div>
-          <div className="mb-3">
-            <select className="form-control" id="car-type" required>
-              <option value="" disabled selected>Preferred Car Type</option>
-              <option value="Sedan">Sedan</option>
-              <option value="Luxury">Luxury</option>
-              <option value="SUV">SUV</option>
-              <option value="Premium">Premium</option>
-              <option value="Ultra-Luxury">Ultra-Luxury</option>
-            </select>
-          </div>
-          <div className="mb-3">
-            <input type="date" className="form-control" id="pick-up-date" required />
-          </div>
-          <div className="mb-3">
-            <input type="date" className="form-control" id="return-date" required />
-          </div>
-          <button type="submit" className="btn btn-primary">Book Now</button>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div className="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-body">
-        <h5>The car has been booked, we will contact you soon!</h5>
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<Footer/>
         </>
 
     )
