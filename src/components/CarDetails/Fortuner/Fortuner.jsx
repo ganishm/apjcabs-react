@@ -43,7 +43,7 @@ const Fortuner = () => {
             </div>
 
             <div className="learn-more text-left">
-                <a href="../../tariff/tariff.html" className="btn btn-primary adventure-btn" style={{marginLeft: "40px", marginTop: "40px"}}>Rent Now</a>
+                <a href="/tariff" className="btn btn-primary adventure-btn" style={{marginLeft: "40px", marginTop: "40px"}}>Rent Now</a>
             </div>
         </div>
     </div>

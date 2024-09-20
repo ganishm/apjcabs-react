@@ -1,6 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx'
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import Services from "./components/Services/Services.jsx";
@@ -27,13 +29,34 @@ import RollsRoyce from './components/CarDetails/RollsRoyce/RollsRoyce.jsx';
 import Velfire from './components/CarDetails/Velfire/Velfire.jsx';
 import Volvo from './components/CarDetails/Volvo/Volvo.jsx';
 import Yacht from './components/CarDetails/Yacht/Yacht.jsx';
+import Chatbot from './components/Chatbot/Chatbot.jsx'
         
 
 function App() {
-  return (
-    <Router>
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 20) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    // Attach the event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return (<>
+  <Header/>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/tariff" element={<Tariff />} />
@@ -61,7 +84,19 @@ function App() {
         <Route path='/yacht' element={<Yacht />} />
 
       </Routes>
-    </Router>
+      </BrowserRouter>
+      <Chatbot/>
+     <Footer />
+    
+     {/* <!-- Top --> */}
+
+      <div id="scroll-top" className={isVisible ? 'scroll-top show' : 'scroll-top'}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <i className="fas fa-arrow-up"></i>
+      </div>
+
+      {/* <!-- Top --> */}
+    </>
   );
 }
 

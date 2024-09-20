@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Gallery.css';
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
+
 
 const Gallery = () => {
   const [fullImg, setFullImg] = useState('');
@@ -30,7 +29,7 @@ const Gallery = () => {
 
   return (
     <>
-    <Header/>
+ 
       {/* Hero Section */}
       <section className="gallery-hero-section text-center position-relative">
         <div className="banner-container">
@@ -67,7 +66,7 @@ const Gallery = () => {
                     />
                     <div className="bottom-fade"></div>
                     <div className="title">
-                      <h4><a href="#">{image.title}</a></h4>
+                      <h4>{image.title}</h4>
                     </div>
                     <div className="curv-butn icon-bg">
                       <div className="vid">
@@ -91,7 +90,7 @@ const Gallery = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+
     </>
   );
 };

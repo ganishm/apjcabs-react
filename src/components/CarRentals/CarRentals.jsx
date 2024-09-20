@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './CarRentals.css'
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
+
 
 const CarRentals = () => {
   return (
    <>
-   <Header/>
+   
    <section className="-rental-hero-section text-center position-relative">
         <div className="banner-container">
           <div className="rental-banner-image">
@@ -392,7 +391,6 @@ const CarRentals = () => {
             </div>
         </div>
     </section>
-    <Footer/>
    </>
   )
 }

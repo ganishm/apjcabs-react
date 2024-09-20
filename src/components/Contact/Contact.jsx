@@ -1,28 +1,23 @@
 import React from 'react';
 import './Contact.css';
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
+
 
 const Contact = () => {
     return (
         <>
-        <Header />
+
             <section className="contact-hero-section text-center position-relative">
                 <div className="banner-container">
                     <div className="contact-banner-image">
                         <img src="/images/banner_all.png" alt="Car Banner" className="img-fluid hero-image" />
                     </div>
-                    <div className="banner-text">
+                    <div className="contact-banner-text">
                         <p>GET IN TOUCH</p>
                         <h1>Contact <span>Us</span></h1>
                     </div>
                 </div>
             </section>
 
-            {/* Scroll to Top Button */}
-            <div id="scrollTopBtn" className="scroll-top d-flex justify-content-center align-items-center">
-                <i className="fas fa-arrow-up"></i>
-            </div>
 
             {/* Contact Boxes Section */}
             <section className="contact-banner position-relative contact_list" style={{ backgroundColor: 'aliceblue' }}>
@@ -67,11 +62,11 @@ const Contact = () => {
                         <div className="col-lg-6 col-md-12 contact-form">
                             <h2>Get in touch</h2>
                             <form>
-                                <div className="form-group">
+                                <div className="contact-form-group">
                                     <input type="text" placeholder="Your Name *" required />
                                     <input type="email" placeholder="Your Email *" required />
                                 </div>
-                                <div className="form-group">
+                                <div className="contact-form-group">
                                     <input type="tel" placeholder="Your Number *" required />
                                     <input type="text" placeholder="Subject *" required />
                                 </div>
@@ -94,7 +89,7 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
-            <Footer/>
+          
         </>
     );
 }

@@ -162,13 +162,30 @@ transition:all 0.3s ease;
 .footer-bottom .nav-column .footer-nav li a:hover{
 color:#ff0000;
 }
-
-.footer-content{
-  left: 50px;
+/* Social Media Links (Vertical, Left-Side, Static) */
+.social-media-links-vertical {
+  position: fixed;
+  top: 70%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
 }
 
-@media only screen and (min-width:437px){
-  .footer-content{
-    left: 10px;
-  }
+.social-media-links-vertical a {
+  margin: 10px 0;
+  transition: transform 0.3s ease;
 }
+
+.social-media-links-vertical a:hover {
+  transform: scale(1.2);
+}
+
+.social-icon-vertical {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
