@@ -30,12 +30,9 @@ import Velfire from './components/CarDetails/Velfire/Velfire.jsx';
 import Volvo from './components/CarDetails/Volvo/Volvo.jsx';
 import Yacht from './components/CarDetails/Yacht/Yacht.jsx';
 import Chatbot from './components/Chatbot/Chatbot.jsx'
-<<<<<<< HEAD
 import SelfDrive from './components/SelfDrive/SelfDrive.jsx';
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-        
 
+        
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -56,7 +53,9 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return (<>
+  return (
+    
+    <>
   <Header/>
     <BrowserRouter>
       <Routes>

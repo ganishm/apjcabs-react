@@ -1,11 +1,8 @@
 import { useState } from 'react';
-<<<<<<< HEAD
+
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBus, faCar, faShieldAlt, faUserTie, faMapSigns, faShip, faHome, faRoute } from '@fortawesome/free-solid-svg-icons';
-=======
-import { useNavigate } from 'react-router-dom'; 
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
 import './Home.css'; // Custom CSS
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -64,7 +61,6 @@ const HeroSection = () => {
     const [activeTab, setActiveTab] = useState('all');
 
     const cars = [
-<<<<<<< HEAD
         { id: 1, type: 'luxury_sedan', name: 'Mercedes', car_model:'Benz S Class',img_path:'/img/cars/benz_s_class_new.png'},
         { id: 2, type: 'luxury_sedan', name: 'Jaguar', car_model:'Xf' ,img_path:'/img/cars/jaguar_xf.png'},
         { id: 3, type: 'luxury_sedan', name: 'Jaguar', car_model:'XJL' ,img_path:'/img/cars/jaguar-xjl.png'},
@@ -104,45 +100,16 @@ const HeroSection = () => {
         // { id: 11, type: 'seven_seater', name: 'KIA', car_model:' Carnival',img_path:'/img/cars/kiacarnival.png' },
         // { id: 12, type: 'five_seater', name: 'Toyota', car_model:' Corolla Altis',img_path:'/img/cars/toyota_corolla_altis.png' },
         // { id: 13, type: 'five_seater', name: 'Toyota', car_model:' Camry Hybrid',img_path:'/img/cars/toyotocarmyhybrid.png' },
-        
-=======
-        { id: 1, type: 'luxury', name: 'Mercedes', car_model:'Benz S Class',img_path:'/img/cars/benz_s_class_new.png'},
-        { id: 2, type: 'luxury', name: 'Jaguar', car_model:'Xf' ,img_path:'/img/cars/jaguar_xf.png'},
-        { id: 3, type: 'luxury', name: 'Jaguar', car_model:'XJL' ,img_path:'/img/cars/jaguar-xjl.png'},
-        { id: 4, type: 'luxury', name: 'Rolls Royce', car_model:'Ghost',img_path:'/img/cars/rr_ghost.png' },
-        { id: 5, type: 'seven_seater', name: 'Audi', car_model:'Q7' ,img_path:'/img/cars/audi-q7.png' },
-        { id: 6, type: 'seven_seater', name: 'Toyota', car_model:'Velfire',img_path:'/img/cars/toyota_vellfire.png' },
-        { id: 7, type: 'seven_seater', name: 'Toyota', car_model:'Innova Crysta G',img_path:'/img/cars/toyato_innova_crysta_g_model.png' },
-        { id: 8, type: 'seven_seater', name: 'Toyota', car_model:'Innova Crysta Z',img_path:'/img/cars/toy_inn_crysta_z_model.png' },
-        { id: 9, type: 'seven_seater', name: 'Toyota', car_model:' Innova',img_path:'/img/cars/toyota_innova.png' },
-        { id: 10, type: 'seven_seater', name: 'Toyota', car_model:' Fortuner',img_path:'/img/cars/toy_fortuner.png' },
-        { id: 11, type: 'seven_seater', name: 'KIA', car_model:' Carnival',img_path:'/img/cars/kiacarnival.png' },
-        { id: 12, type: 'five_seater', name: 'Toyota', car_model:' Corolla Altis',img_path:'/img/cars/toyota_corolla_altis.png' },
-        { id: 13, type: 'five_seater', name: 'Toyota', car_model:' Camry Hybrid',img_path:'/img/cars/toyotocarmyhybrid.png' },
-        { id: 14, type: 'five_seater', name: 'Audi', car_model:' A6',img_path:'/img/cars/audi_a6.png' },
-        { id: 15, type: 'five_seater', name: 'BMW', car_model:' 5 Series',img_path:'/img/cars/bmw-5-series.png' },
-        { id: 16, type: 'five_seater', name: 'Mercedes ', car_model:'Benz E Class',img_path:'/img/cars/benzelass.png' },
-        { id: 17, type: 'bus', name: 'Volvo', car_model:' Bus',img_path:'/img/cars/volvo_bus.png' },
-        { id: 18, type: 'yacht', name: 'Yacht',img_path:'/img/cars/yatch.png' },
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
     ];
 
     const tabs = [
         { name: 'All', filter: 'all' },
-<<<<<<< HEAD
         { name: 'Toyota', filter: 'toyota' },
         { name: 'Luxury Sedan', filter: 'luxury_sedan' },
         { name: '6/7 Seater', filter: '6/7_seater' },
         { name: 'MPV', filter: 'mpv' },
         { name: 'Bus', filter: 'bus' },
         { name: 'Flying', filter: 'flying' },
-=======
-        { name: 'Luxury', filter: 'luxury' },
-        { name: '7 Seater', filter: 'seven_seater' },
-        { name: '5 Seater', filter: 'five_seater' },
-        { name: 'Bus', filter: 'bus' },
-        { name: 'Yacht', filter: 'yacht' },
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
     ];
 
     const handleTabClick = (filter) => {
@@ -198,12 +165,8 @@ const HeroSection = () => {
                 from_date: '',
                 to_date: ''
             });
-<<<<<<< HEAD
             // Navigate to the tariff page
-            navigate('/tariff'); // Navigate to the tariff page
-=======
             navigate('/tariff'); 
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
         } else {
             // Set validation errors to state
             setErrors(validationErrors);
@@ -238,11 +201,8 @@ const HeroSection = () => {
         speed: 500, // Speed of slide transition
         slidesToShow: 1,
         slidesToScroll: 1,
-<<<<<<< HEAD
-        autoplay: true, // Enable autoplay
-=======
-        autoplay: false, // Enable autoplay
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+
+        autoplay: true, 
         autoplaySpeed: 3000, // Time between slides in milliseconds (3 seconds)
         arrows: true, // Enable left/right arrows
         nextArrow: <NextArrow />, // Custom arrow components
@@ -254,17 +214,14 @@ const HeroSection = () => {
             title: "First Banner Title",
             description: "This is the description for the first banner.",
             buttonText: "Learn More",
-<<<<<<< HEAD
+
             imageUrl: "/images/banner/banner1.png",
-=======
-            imageUrl: "/images/banner/redcar.png", // Replace with your image
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
         },
         {
             title: "Second Banner Title",
             description: "This is the description for the second banner.",
             buttonText: "Discover More",
-<<<<<<< HEAD
+
             imageUrl: "/images/banner/banner2.png",
         },
         {
@@ -341,31 +298,6 @@ const HeroSection = () => {
           icon: faShip
         },
       ];
-
-=======
-            imageUrl: "/images/banner/yatch.png",
-        },
-        {
-            title: "Second Banner Title",
-            description: "This is the description for the second banner.",
-            buttonText: "Discover More",
-            imageUrl: "/images/banner/wedcarr.png",
-        },
-        {
-            title: "Second Banner Title",
-            description: "This is the description for the second banner.",
-            buttonText: "Discover More",
-            imageUrl: "/images/banner/car.png",
-        },
-        {
-            title: "Second Banner Title",
-            description: "This is the description for the second banner.",
-            buttonText: "Discover More",
-            imageUrl: "/images/banner/busses.png",
-        },
-    ];
-
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
     return (
         <>
             {/* <!-- Banner --> */}
@@ -521,11 +453,7 @@ const HeroSection = () => {
                                         <p className="car-hours">4 Hours</p>
                                     </div>
                                 </div>
-<<<<<<< HEAD
                                 {/* <div className="car-features">
-=======
-                                <div className="car-features">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <div className="feature">
                                         <i className="fas fa-users"></i>
                                         <p>4 People</p>
@@ -538,13 +466,9 @@ const HeroSection = () => {
                                         <i className="fas fa-car"></i>
                                         <p>40L</p>
                                     </div>
-<<<<<<< HEAD
+
                                 </div> */}
                                 <a href='/tariff'><button className="rent-button">Rent Now</button></a>
-=======
-                                </div>
-                                <button className="rent-button">Rent Now</button>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                             </div>
                         ))}
                     </div>
@@ -552,7 +476,6 @@ const HeroSection = () => {
             </section>
             {/* <!-- Trending Deals --> */}
 
-<<<<<<< HEAD
             <section className="unique-advantages-section">
       <h2 className="advantage-section-title">A.P.J Advantages</h2>
       <div className="advantages-timeline">
@@ -569,9 +492,6 @@ const HeroSection = () => {
         ))}
       </div>
     </section>
-
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
 
             {/* <!-- Adventure --> */}
 
@@ -730,20 +650,13 @@ const HeroSection = () => {
                             </div>
                         </div>
                         <div className="item black">
-<<<<<<< HEAD
+
                             <img src="./img/car_slider/bus_rental.png" alt="" />
-=======
-                            <img src="./img/car_slider/volvo.png" alt="" />
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                             <div className="inner">
                                 <div className="row">
                                     <div className="col-md-7">
                                         <div className="title">
-<<<<<<< HEAD
                                             Bus Rental
-=======
-                                            Volvo
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                         </div>
                                         <div className="options">
                                             <p><i className="fa-solid fa-door-open"></i>4 Seats</p>
@@ -752,11 +665,8 @@ const HeroSection = () => {
                                     </div>
                                     <div className="col-md-5">
                                         <div className="details">
-<<<<<<< HEAD
+
                                             <a href="#" className="btn btn-primary">Details</a>
-=======
-                                            <a href="/volvo" className="btn btn-primary">Details</a>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                             <div className="prices">
                                                 <h3>₹9000</h3>
                                                 <p>4 Hours</p>
@@ -766,46 +676,6 @@ const HeroSection = () => {
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-
-                        {/* <div className="item black">
-                            <img src="./img/car_slider/volvo.png" alt="" />
-=======
-                        <div className="item black">
-                            <img src="./img/car_slider/yatch.png" alt="" />
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-                            <div className="inner">
-                                <div className="row">
-                                    <div className="col-md-7">
-                                        <div className="title">
-<<<<<<< HEAD
-                                            Volvo
-=======
-                                            Yatch
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-                                        </div>
-                                        <div className="options">
-                                            <p><i className="fa-solid fa-door-open"></i>4 Seats</p>
-                                            <p><i className="fa-solid fa-list"></i>Auto</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-5">
-                                        <div className="details">
-<<<<<<< HEAD
-                                            <a href="/volvo" className="btn btn-primary">Details</a>
-=======
-                                            <a href="/yacht" className="btn btn-primary">Details</a>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-                                            <div className="prices">
-                                                <h3>₹9000</h3>
-                                                <p>4 Hours</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-<<<<<<< HEAD
-                        </div> */}
                         <div className="item black">
                             <img src="./img/car_slider/celebrity.png" alt="" />
                             <div className="inner">
@@ -919,8 +789,6 @@ const HeroSection = () => {
                                     </div>
                                 </div>
                             </div>
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                         </div>
                     </OwlCarousel>
                 </div>
