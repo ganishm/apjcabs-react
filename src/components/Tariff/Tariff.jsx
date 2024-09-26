@@ -418,8 +418,6 @@ const Tariff = () => {
             <td>
               <img src="images/carRentals/hawker.png" alt="Yacht" className="tariff-car-image"/>
               <br/>Private Jet Hawker
-              <img src="images/tariff/yatch.jpg" alt="Yacht" className="tariff-car-image"/>
-              <br/>Yacht
             </td>
             <td>Customized On Request</td>
             <td>-</td>
