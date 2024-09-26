@@ -273,6 +273,7 @@ const Tariff = () => {
           </tr> */}
           <tr>
             <td>
+<<<<<<< HEAD
               <img src="images/carRentals/hycrosshybrid.png" alt="Yacht" className="tariff-car-image"/>
               <br/>Toyota Innova Hycross Hybrid
             </td>
@@ -418,6 +419,10 @@ const Tariff = () => {
             <td>
               <img src="images/carRentals/hawker.png" alt="Yacht" className="tariff-car-image"/>
               <br/>Private Jet Hawker
+=======
+              <img src="images/tariff/yatch.jpg" alt="Yacht" className="tariff-car-image"/>
+              <br/>Yacht
+>>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
             </td>
             <td>Customized On Request</td>
             <td>-</td>
