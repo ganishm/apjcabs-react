@@ -21,22 +21,22 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="contact-info col-md-4 col-12 mb-2">
             <h3>Contact</h3>
-<<<<<<< HEAD
+
             <p><img src="img/google-maps.png" style={{ paddingRight: "10px" }} />No 2/11, 51st Street, <br /> Ashok Nagar, Chennai - 600 083</p>
             <p><img src="img/telephone-call.png" style={{ paddingRight: "10px" }} /> +91 9677 111 999 | 91-44-48598677</p>
             <p><img src="img/gmail.png" style={{ paddingRight: "10px" }} /> cars@apjcabs.com</p>
-=======
+
             <p><img src="/icons/google-maps.png" style={{ paddingRight: "10px" }} /> No 2/11, 51st Street, <br /> Ashok Nagar, Chennai - 600 083</p>
             <p><img src="/icons/telephone-call.png" style={{ paddingRight: "10px" }} /> +91 9677 111 999 | 91-44-48598677</p>
             <p><img src="/icons/gmail.png" style={{ paddingRight: "10px" }} /> cars@apjcabs.com</p>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+
           </div>
 
           {/* Useful Links */}
           <div className="useful-links col-md-4 col-12 mb-2">
             <h3>Useful Links</h3>
             <ul className="footer-menu">
-<<<<<<< HEAD
+
               <li><img src='img/house.png' style={{ paddingRight: "10px", width: "35px" }} /><a href="/">Home</a></li>
               <li><img src="img/info.png" style={{ paddingRight: "10px" }} /><a href="/about">About Us</a></li>
               <li><img src="img/settings.png" style={{ paddingRight: "10px", width: "32px" }} /><a href="/services">Services</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
               <li><img src="img/list.png" style={{ paddingRight: "10px", width: "32px" }} /><a href="/car-rental">Car Lists</a></li>
               <li><img src="img/gallery.png" style={{ paddingRight: "10px" }} /><a href="/gallery">Gallery</a></li>
               <li><img src="img/contact.png" style={{ paddingRight: "10px" }} /><a href="/contact">Contact Us</a></li>
-=======
+
               <li><img src="/icons/house.png" style={{ paddingRight: "10px", width: "35px" }} /><a href="/">Home</a></li>
               <li><img src="/icons/info.png" style={{ paddingRight: "10px" }} /><a href="/about">About Us</a></li>
               <li><img src="/icons/settings.png" style={{ paddingRight: "10px", width: "32px" }} /><a href="/services">Services</a></li>
@@ -54,14 +54,14 @@ const Footer = () => {
               <li><img src="/icons/list.png" style={{ paddingRight: "10px", width: "32px" }} /><a href="/car-rental">Car Lists</a></li>
               <li><img src="/icons/gallery.png" style={{ paddingRight: "10px" }} /><a href="/gallery">Gallery</a></li>
               <li><img src="/icons/contact.png" style={{ paddingRight: "10px" }} /><a href="/contact">Contact Us</a></li>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+
             </ul>
           </div>
         </div>
 
         {/* Social Media Links (Vertical, Left-Side) */}
         <div className="social-media-links-vertical">
-<<<<<<< HEAD
+
           <a href="https://www.facebook.com/bridalcarrentalinchennai/" target="_blank" rel="noreferrer">
             <img src="img/facebook.png" alt="Facebook" className="social-icon-vertical" />
           </a>
@@ -73,7 +73,7 @@ const Footer = () => {
           </a>
           <a href="https://www.linkedin.com/company/apj-cabs-car-rental-company/" target="_blank" rel="noreferrer">
             <img src="img/linkedin.png" alt="LinkedIn" className="social-icon-vertical" />
-=======
+            </a>
         <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
             <img src={LinkedIn3D} alt="LinkedIn" className="social-icon-vertical" />
           </a>
@@ -85,7 +85,6 @@ const Footer = () => {
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <img src={Facebook3D} alt="Facebook" className="social-icon-vertical" />
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
           </a>
         </div>
       </div>
