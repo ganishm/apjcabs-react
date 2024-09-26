@@ -116,14 +116,14 @@
     flex-direction: column;
 }
 
-.form-group {
+.contact-form-group {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-.form-group input {
+.contact-form-group input {
     width: 100%;
     padding: 15px;
     border-radius: 25px;
@@ -160,44 +160,13 @@ button:hover {
     border-radius: 20px;
 }
 
-/* Scroll to Top Button */
-.scroll-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: 2px solid #18B2D3; /* Orange border color */
-    border-radius: 50%;
-    display: none;
-    z-index: 999;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.scroll-top i {
-    color: #18B2D3; /* Arrow color */
-    font-size: 20px;
-}
-
-.scroll-top.show {
-    display: flex;
-    background-color: #18B2D3; /* Orange background when scrolling */
-    border-radius: 25%;
-}
-
-.scroll-top.show i {
-    color: #fff; /* White arrow when active */
-}
-
 .contact_list p{
     min-height:50px;
 
 }
 
 @media only screen and (max-width:550px){
-    .banner-text{
+    .contact-banner-text{
         display: none;
     }
 

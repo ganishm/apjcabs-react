@@ -331,3 +331,9 @@
         margin-top: 30px;
     }
 }
+
+@media (max-width: 767px) {
+    .reverse {
+      flex-direction: column-reverse;
+    }
+  }

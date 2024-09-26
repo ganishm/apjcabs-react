@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -7,35 +6,51 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="footer-content row">
+          {/* Company Info */}
           <div className="company-info col-md-4 col-12 mb-2">
             <h2>APJ CABS</h2>
             <p>A.P.J CABS is an ISO 9001-2008 certified car rental company established in the year 2006 to provide
-              impeccable quality of rental car services for corporate travel. Our formidable fleet comprises
-              Sedan, Luxury, SUV, Premium, and Ultra-Luxury Cars along with Volvo Bus.</p>
+              impeccable quality of rental car services for corporate travel.</p>
           </div>
+
+          {/* Contact Info */}
           <div className="contact-info col-md-4 col-12 mb-2">
-            <div>
-              <h3>Contact</h3>
-              <p><img src="/icons/google-maps.png" style={{ paddingRight: "10px" }} /> No 2/11, 51st Street, <br /> Ashok Nagar, Chennai - 600 083</p>
-              <p><img src="/icons/telephone-call.png" style={{ paddingRight: "10px" }} /> +91 9677 111 999 | 91-44-48598677</p>
-              <p><img src="/icons/gmail.png" style={{ paddingRight: "10px" }} /> cars@apjcabs.com</p>
-            </div>
+            <h3>Contact</h3>
+            <p><img src="img/google-maps.png" style={{ paddingRight: "10px" }} />No 2/11, 51st Street, <br /> Ashok Nagar, Chennai - 600 083</p>
+            <p><img src="img/telephone-call.png" style={{ paddingRight: "10px" }} /> +91 9677 111 999 | 91-44-48598677</p>
+            <p><img src="img/gmail.png" style={{ paddingRight: "10px" }} /> cars@apjcabs.com</p>
           </div>
+
+          {/* Useful Links */}
           <div className="useful-links col-md-4 col-12 mb-2">
-            <div>
-              <h3>Useful Links</h3>
-              <ul className="footer-menu">
-                <li><img src="/icons/house.png" style={{ paddingRight: "10px", width: "35px" }} /><Link to="/">Home</Link></li>
-                <li><img src="/icons/info.png" style={{ paddingRight: "10px" }} /><Link to="/about">About Us</Link></li>
-                <li><img src="/icons/settings.png" style={{ paddingRight: "10px", width: "32px" }} /><Link to="/services">Services</Link></li>
-                <li><img src="/icons/budgeting.png" style={{ paddingRight: "10px", width: "35px" }} /><Link to="/tariff">Tariff</Link></li>
-                <li><img src="/icons/client.png" style={{ paddingRight: "10px" }} /><Link to="/clients">Clients</Link></li>
-                <li><img src="/icons/list.png" style={{ paddingRight: "10px", width: "32px" }} /><Link to="/car-rental">Car Lists</Link></li>
-                <li><img src="/icons/gallery.png" style={{ paddingRight: "10px" }} /><Link to="/gallery">Gallery</Link></li>
-                <li><img src="/icons/contact.png" style={{ paddingRight: "10px" }} /><Link to="/contact">Contact Us</Link></li>
-              </ul>
-            </div>
+            <h3>Useful Links</h3>
+            <ul className="footer-menu">
+              <li><img src='img/house.png' style={{ paddingRight: "10px", width: "35px" }} /><a href="/">Home</a></li>
+              <li><img src="img/info.png" style={{ paddingRight: "10px" }} /><a href="/about">About Us</a></li>
+              <li><img src="img/settings.png" style={{ paddingRight: "10px", width: "32px" }} /><a href="/services">Services</a></li>
+              <li><img src="img/budgeting.png" style={{ paddingRight: "10px", width: "35px" }} /><a href="/tariff">Tariff</a></li>
+              <li><img src="img/client.png" style={{ paddingRight: "10px" }} /><a href="/clients">Clients</a></li>
+              <li><img src="img/list.png" style={{ paddingRight: "10px", width: "32px" }} /><a href="/car-rental">Car Lists</a></li>
+              <li><img src="img/gallery.png" style={{ paddingRight: "10px" }} /><a href="/gallery">Gallery</a></li>
+              <li><img src="img/contact.png" style={{ paddingRight: "10px" }} /><a href="/contact">Contact Us</a></li>
+            </ul>
           </div>
+        </div>
+
+        {/* Social Media Links (Vertical, Left-Side) */}
+        <div className="social-media-links-vertical">
+          <a href="https://www.facebook.com/bridalcarrentalinchennai/" target="_blank" rel="noreferrer">
+            <img src="img/facebook.png" alt="Facebook" className="social-icon-vertical" />
+          </a>
+          <a href="https://x.com/apjcabs1?s=21" target="_blank" rel="noreferrer">
+            <img src="img/x.png" alt="Twitter" className="social-icon-vertical" />
+          </a>
+          <a href="https://www.instagram.com/apj_cabs_luxury_car_rental/" target="_blank" rel="noreferrer">
+            <img src="img/insta.png" alt="Instagram" className="social-icon-vertical" />
+          </a>
+          <a href="https://www.linkedin.com/company/apj-cabs-car-rental-company/" target="_blank" rel="noreferrer">
+            <img src="img/linkedin.png" alt="LinkedIn" className="social-icon-vertical" />
+          </a>
         </div>
       </div>
 

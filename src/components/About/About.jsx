@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./About.css";
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 
 
 const About = () => {
@@ -41,7 +39,7 @@ const About = () => {
     };
   return (
     <>
-      <Header/> 
+
     <section className="about-hero-section text-center position-relative">
         <div className="banner-container">
           <div className="about-banner-image">
@@ -79,7 +77,7 @@ const About = () => {
 
     <section className="what-we-do-section py-5">
         <div className="container">
-            <div className="row align-items-center">
+            <div className="row align-items-center reverse">
                 
                 <div className="col-md-6">
                     <div className="image-wrapper">
@@ -208,7 +206,6 @@ const About = () => {
       </div>
     </div>
   </div>
-  <Footer /> 
     </>
   );
 };

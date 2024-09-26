@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Tariff.css'
 
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
-
 const Tariff = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -49,7 +46,7 @@ const Tariff = () => {
     return (
 
         <>
-        <Header/>
+ 
         <section className="tariff-hero-section text-center position-relative">
       <div className="banner-container">
         <div className="tariff-banner-image">
@@ -78,7 +75,7 @@ const Tariff = () => {
         <tbody>
           <tr>
             <td>
-              <img src="images/tariff/altis.jpg" alt="Toyota Corolla Altis" className="car-image"/>
+              <img src="images/tariff/altis.jpg" alt="Toyota Corolla Altis" className="tariff-car-image"/>
               <br/>Toyota Corolla Altis
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -89,7 +86,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/camry.jpg" alt="Toyota Camry Hybrid" className="car-image"/>
+              <img src="images/tariff/camry.jpg" alt="Toyota Camry Hybrid" className="tariff-car-image"/>
               <br/>Toyota Camry Hybrid
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -100,7 +97,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/audia6.jpg" alt="Audi A6" className="car-image"/>
+              <img src="images/tariff/audia6.jpg" alt="Audi A6" className="tariff-car-image"/>
               <br/>Audi A6
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -111,7 +108,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/bmw5series.jpg" alt="BMW 5 Series" className="car-image"/>
+              <img src="images/tariff/bmw5series.jpg" alt="BMW 5 Series" className="tariff-car-image"/>
               <br/>BMW 5 Series
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -122,7 +119,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/audiq7.jpg" alt="Audi Q7" className="car-image"/>
+              <img src="images/tariff/audiq7.jpg" alt="Audi Q7" className="tariff-car-image"/>
               <br/>Audi Q7
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -133,7 +130,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/mercedes_benz_e_class.jpg" alt="Mercedes Benz E className" className="car-image"/>
+              <img src="images/tariff/mercedes_benz_e_class.jpg" alt="Mercedes Benz E className" className="tariff-car-image"/>
               <br/>Mercedes Benz E className
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -144,7 +141,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/mercedes_benz_s_class.jpg" alt="Mercedes Benz S className" className="car-image"/>
+              <img src="images/tariff/mercedes_benz_s_class.jpg" alt="Mercedes Benz S className" className="tariff-car-image"/>
               <br/>Mercedes Benz S className
             </td>
             <td>8 Hour and 80 Kms</td>
@@ -155,7 +152,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/toyota-vellfire.jpg" alt="Toyota Vellfire" className="car-image"/>
+              <img src="images/tariff/toyota-vellfire.jpg" alt="Toyota Vellfire" className="tariff-car-image"/>
               <br/>Toyota Vellfire
             </td>
             <td>8 Hour and 80 Kms</td>
@@ -166,7 +163,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Jaguar_XF.jpg" alt="Jaguar XF" className="car-image"/>
+              <img src="images/tariff/Jaguar_XF.jpg" alt="Jaguar XF" className="tariff-car-image"/>
               <br/>Jaguar XF
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -177,7 +174,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Jaguar_XJL.jpg" alt="Jaguar XJL" className="car-image"/>
+              <img src="images/tariff/Jaguar_XJL.jpg" alt="Jaguar XJL" className="tariff-car-image"/>
               <br/>Jaguar XJL
             </td>
             <td>8 Hour and 80 Kms</td>
@@ -188,7 +185,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Rolls_Royce_Ghost.jpg" alt="Rolls Royce Ghost" className="car-image"/>
+              <img src="images/tariff/Rolls_Royce_Ghost.jpg" alt="Rolls Royce Ghost" className="tariff-car-image"/>
               <br/>Rolls Royce Ghost
             </td>
             <td>8 Hour and 80 Kms</td>
@@ -199,7 +196,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Toyota_Innova.jpg" alt="Toyota Innova" className="car-image"/>
+              <img src="images/tariff/Toyota_Innova.jpg" alt="Toyota Innova" className="tariff-car-image"/>
               <br/>Toyota Innova
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -210,7 +207,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Toyota_Innova_Crysta.jpg" alt="Toyota Innova Crysta G Model" className="car-image"/>
+              <img src="images/tariff/Toyota_Innova_Crysta.jpg" alt="Toyota Innova Crysta G Model" className="tariff-car-image"/>
               <br/>Toyota Innova Crysta G Model
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -221,7 +218,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Toyota_Innova_Crysta.jpg" alt="Toyota Innova Crysta Z Model" className="car-image"/>
+              <img src="images/tariff/Toyota_Innova_Crysta.jpg" alt="Toyota Innova Crysta Z Model" className="tariff-car-image"/>
               <br/>Toyota Innova Crysta Z Model
             </td>
             <td>8 Hours and 80 Kms</td>
@@ -232,7 +229,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Toyota_Fortuner.jpg" alt="Toyota Fortuner" className="car-image"/>
+              <img src="images/tariff/Toyota_Fortuner.jpg" alt="Toyota Fortuner" className="tariff-car-image"/>
               <br/>Toyota Fortuner
             </td>
             <td>4 Hours and 40 Kms</td>
@@ -243,7 +240,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/carnival.jpg" alt="KIA Carnival" className="car-image"/>
+              <img src="images/tariff/carnival.jpg" alt="KIA Carnival" className="tariff-car-image"/>
               <br/>KIA Carnival
             </td>
             <td>8 Hours and 80 Kms</td>
@@ -254,7 +251,7 @@ const Tariff = () => {
           </tr>
           <tr>
             <td>
-              <img src="images/tariff/Volvo_Bus.jpg" alt="Volvo Bus" className="car-image"/>
+              <img src="images/tariff/Volvo_Bus.jpg" alt="Volvo Bus" className="tariff-car-image"/>
               <br/>Volvo Bus
             </td>
             <td>1 day With in Chennai 300 kms</td>
@@ -263,10 +260,164 @@ const Tariff = () => {
             <td>100 / km</td>
             <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
           </tr>
+          {/* <tr>
+            <td>
+              <img src="images/tariff/yatch.jpg" alt="Yacht" className="tariff-car-image"/>
+              <br/>Yacht
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr> */}
           <tr>
             <td>
-              <img src="images/tariff/yatch.jpg" alt="Yacht" className="car-image"/>
-              <br/>Yacht
+              <img src="images/carRentals/hycrosshybrid.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Toyota Innova Hycross Hybrid
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/hycrosspetrol.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Toyota Innova Hycross
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/commuter.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Toyota Commuter
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/gls450d.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Mercedes Benz GLS 450D
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/vclass.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Mercedes Benz V Class
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/7series.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>BMW 7 Series
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/tempo.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Tempo Traveller
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/urbania.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Urbania
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/benz_26.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Benz Bus
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/leyland_34.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Leyland Bus
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/leyland40.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Leyland Bus
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/bell.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Helicoptor Bell
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/augusta.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Helicoptor Augusta
+            </td>
+            <td>Customized On Request</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td><button className="btn btn-tariff" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/carRentals/hawker.png" alt="Yacht" className="tariff-car-image"/>
+              <br/>Private Jet Hawker
             </td>
             <td>Customized On Request</td>
             <td>-</td>
@@ -378,7 +529,7 @@ const Tariff = () => {
           </div>
         </div>
       </div>
-<Footer/>
+
         </>
 
     )
