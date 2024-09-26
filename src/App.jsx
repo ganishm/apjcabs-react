@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import Header from './components/Header/Header.jsx';
@@ -32,7 +32,6 @@ import Yacht from './components/CarDetails/Yacht/Yacht.jsx';
 import Chatbot from './components/Chatbot/Chatbot.jsx'
 import SelfDrive from './components/SelfDrive/SelfDrive.jsx';
 
-        
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
