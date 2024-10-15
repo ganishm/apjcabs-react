@@ -81,7 +81,6 @@ textarea {
   border: 1px solid #ccc;
   padding: 0.5em;
   margin: 0.5em 0;
-<<<<<<< HEAD
 }
 
 input:focus,
@@ -271,6 +270,77 @@ footer {
   }
 }
 
+/* Popular services */
+
+.service-container {
+  padding: 20px;
+  text-align: center; /* Center the title */
+}
+
+.service-popular-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.service-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+  gap: 50px;
+}
+
+.service-card {
+  background-color: #e9e9e9;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%; /* Full width of grid column */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px; /* Set a fixed height for uniformity */
+  display: flex; /* Enable flexbox for card content */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items evenly */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 150px; /* Set a fixed height for the image */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.service-card-title {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.service-card-description {
+  font-size: 16px; 
+  color: #555;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .service-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* How it Works */
 
 /* Trending Deals  */
@@ -278,31 +348,31 @@ footer {
 /* Basic styling for tabs and cars */
 
 /* Container for tabs */
+
 .tabs-wrapper {
-  width: 60%; /* Set the width of the tabs to 50% of the container */
-  margin: auto; /* Center the tabs wrapper */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
 .tabs {
   display: flex;
-  justify-content: center; /* Center the tabs */
-  flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-  gap: 10px; /* Space between tabs */
-  margin-bottom: 20px; /* Space below tabs */
+  flex-wrap: wrap; /* Allows the tabs to wrap to the next line */
+  justify-content: center;
+  max-width: 100%;
+  gap: 10px; /* Adds space between buttons */
 }
 
-/* Style for individual tab buttons */
 .tab {
   padding: 10px 20px;
-  cursor: pointer;
-  background-color: #ddd;
+  border: 2px solid #18B2D3;
+  border-radius: 20px;
+  background-color: #f1f1f1;
   color: #333;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Ensure tabs do not shrink too small */
-  flex: 1 1 auto;
 }
 
 /* Active tab styling */
@@ -345,13 +415,14 @@ footer {
   overflow: hidden;
   background-color: #fff;
   padding: 15px;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Ensure car item has a fixed width */
   max-width: 100%; /* Prevents overflow */
 }
 
 .car-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Car image takes up the first row */
@@ -396,10 +467,11 @@ footer {
   text-align: right;
 }
 
+
 /* Car features (icon and text) */
 .car-features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 10px 0;
 }
@@ -409,6 +481,7 @@ footer {
   background: #e1f1f9;
   padding: 13px;
   border-radius: 10px;
+  max-width: 120px;
 }
 
 .feature i {
@@ -424,7 +497,6 @@ footer {
 
 /* Rent button */
 .rent-button {
-  padding: 10px;
   background-color: #18b2d3;
   color: white;
   border: none;
@@ -433,7 +505,7 @@ footer {
   width: max-content;
   text-align: center;
   margin-top: 10px;
-  margin: auto;
+  margin-right: -100px;
 }
 
 .rent-button:hover {
@@ -453,6 +525,9 @@ footer {
 @media (max-width: 599px) {
   .car-item {
     flex: 1 1 100%; /* One item per row on small screens */
+  }
+  .rent-button{
+    margin-left: -30px;
   }
 }
 
@@ -585,492 +660,6 @@ footer {
   margin-bottom: 0;
 }
 
-=======
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.odd_bg {
-  background-color: #fff;
-}
-
-.even_bg {
-  background-color: #e1f1f9;
-}
-
-.how-it-works,
-.trending,
-.adventure,
-.choose_us,
-.customer_say {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.banner h2,
-.how-it-works h2,
-.trending h2,
-.adventure h2,
-.choose_us h2,
-.customer_say h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.banner p,
-.how-it-works p,
-.trending p,
-.adventure p,
-.choose_us p,
-.customer_say p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #555;
-}
-
-footer {
-  padding: 50px 0;
-}
-
-.copyright p {
-  margin: 0;
-}
-
-.form-group.home-input input {
-  padding: 0.375rem 0.75rem !important;
-  border-radius: 0px !important;
-}
-
-.error {
-  color: red;
-}
-
-/* Common */
-
-/* Banner */
-
-.banner {
-  /* padding: 100px 0; */
-  background-image: linear-gradient(135deg, #e6f7fe, #feede5);
-  position: relative;
-}
-
-.banner-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.banner h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-
-.banner p {
-  font-size: 1.2rem;
-  margin: 20px 0;
-}
-
-.banner .btn {
-  margin: auto;
-  width: max-content;
-}
-
-.banner img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .banner {
-    text-align: center;
-  }
-
-  .banner-content {
-    margin-bottom: 20px;
-  }
-}
-
-.centered-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: -40px;
-}
-
-.form-container {
-  width: 100%;
-  max-width: 80%; /* 80% width on desktop and tablet */
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-  display: flex;
-  align-items: center;
-  flex-wrap: unset !important;
-  gap: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-.form-group i {
-  font-size: 1.5rem;
-  margin-right: 10px;
-  color: #0d6efd;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .form-container {
-    max-width: 100%; /* Full width on mobile */
-  }
-}
-
-/* Banner */
-
-/* How it Works */
-
-.how-it-works .column {
-  padding: 20px;
-}
-
-.how-it-works i {
-  margin-bottom: 20px;
-}
-
-.how-it-works h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.how-it-works .description {
-  font-size: 1rem;
-  color: #777;
-}
-
-@media (max-width: 768px) {
-  .how-it-works .column {
-    margin-bottom: 30px;
-  }
-}
-
-/* How it Works */
-
-/* Trending Deals  */
-
-/* Basic styling for tabs and cars */
-
-/* Container for tabs */
-.tabs-wrapper {
-  width: 60%; /* Set the width of the tabs to 50% of the container */
-  margin: auto; /* Center the tabs wrapper */
-}
-
-.tabs {
-  display: flex;
-  justify-content: center; /* Center the tabs */
-  flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-  gap: 10px; /* Space between tabs */
-  margin-bottom: 20px; /* Space below tabs */
-}
-
-/* Style for individual tab buttons */
-.tab {
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #ddd;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-  /* Ensure tabs do not shrink too small */
-  flex: 1 1 auto;
-}
-
-/* Active tab styling */
-.tab.active {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Responsive adjustments */
-@media (max-width: 599px) {
-  .tabs-wrapper {
-    width: 100%; /* Full width on small screens */
-  }
-
-  .tab {
-    font-size: 12px; /* Smaller font size on small screens */
-    padding: 8px 16px; /* Adjust padding for smaller screens */
-  }
-}
-
-@media (min-width: 600px) {
-  .tab {
-    font-size: 14px; /* Default font size */
-    padding: 10px 20px; /* Default padding */
-  }
-}
-
-@media (min-width: 900px) {
-  .tab {
-    font-size: 16px; /* Larger font size for larger screens */
-    padding: 12px 24px; /* Larger padding for larger screens */
-  }
-}
-
-.car-item {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  padding: 15px;
-  transition: box-shadow 0.3s ease;
-  /* Ensure car item has a fixed width */
-  max-width: 100%; /* Prevents overflow */
-}
-
-.car-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Car image takes up the first row */
-.car-image {
-  width: 100%;
-  height: 250px;
-  border-bottom: 1px solid #eee;
-}
-
-/* Car info (name, model, price, hours) */
-.car-info {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-}
-
-.left-info {
-  text-align: left;
-}
-
-.car-name,
-.car-price {
-  font-size: 20px;
-  margin-bottom: 2px;
-  font-weight: bold;
-  color: #333;
-}
-
-.car-list p {
-  color: #18b2d3;
-  font-weight: bold;
-  margin-bottom: 0px;
-  font-size: 14px;
-}
-
-.car-model {
-  font-size: 14px;
-  color: #666;
-}
-
-.right-info {
-  text-align: right;
-}
-
-/* Car features (icon and text) */
-.car-features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  padding: 10px 0;
-}
-
-.feature {
-  text-align: center;
-  background: #e1f1f9;
-  padding: 13px;
-  border-radius: 10px;
-}
-
-.feature i {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.feature p {
-  font-size: 12px;
-  color: #555;
-}
-
-/* Rent button */
-.rent-button {
-  padding: 10px;
-  background-color: #18b2d3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: max-content;
-  text-align: center;
-  margin-top: 10px;
-  margin: auto;
-}
-
-.rent-button:hover {
-  background-color: #45a049;
-}
-
-/* Responsive layout */
-.car-list {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(350px, 1fr)
-  ); /* Adjust minmax value to control car-item width */
-  gap: 20px;
-}
-
-@media (max-width: 599px) {
-  .car-item {
-    flex: 1 1 100%; /* One item per row on small screens */
-  }
-}
-
-@media (min-width: 600px) {
-  .car-item {
-    /* Flexbox or Grid will handle sizing */
-    margin: 0; /* Remove margin for this layout */
-  }
-}
-
-@media (min-width: 900px) {
-  .car-item {
-    /* Flexbox or Grid will handle sizing */
-    margin: 0; /* Remove margin for this layout */
-  }
-}
-
-/* Trending Deals  */
-
-/* Adventure */
-
-.adventure .adventure_title {
-  text-align: left;
-  font-size: 3rem;
-}
-
-.adventure p {
-  text-align: left;
-}
-
-.owl-carousel .item {
-  opacity: 0.4;
-  transition: 0.4s ease all;
-  margin: 0 10px;
-  transform: scale(1);
-}
-
-.owl-carousel .active .item:hover {
-  transform: scale(1.05);
-}
-
-.owl-carousel .item img {
-  border-radius: 20px;
-}
-@media (max-width: 1000px) {
-  .owl-carousel .item {
-    margin: 0;
-    transform: scale(1);
-  }
-}
-
-.active .item {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* .inner {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  text-align: center;
-} */
-
-.inner {
-  position: relative;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  max-width: 60%;
-  background: #f2f2f2;
-  margin: auto;
-  z-index: 25;
-  padding: 25px;
-  border-radius: 20px;
-}
-
-.inner .title {
-  text-align: left;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.inner .options {
-  display: flex;
-  margin-top: 5px;
-}
-
-.inner .options p {
-  font-size: 14px;
-  margin-right: 10px;
-}
-
-.inner .options p i {
-  margin-right: 5px;
-  color: #18b2d3;
-}
-
-.inner .details {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-@media (max-width: 600px) {
-  .inner .details {
-    display: none;
-  }
-}
-
-.inner .details a {
-  color: #000;
-  margin-right: 10px;
-  height: max-content;
-  background: #18b2d3;
-}
-
-.inner .details .prices h3 {
-  color: #18b2d3;
-  margin-bottom: 0;
-}
-
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
 .inner .details .prices p {
   font-size: 14px;
   text-align: center;
@@ -1365,11 +954,7 @@ footer {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .banner-slide {
-<<<<<<< HEAD
     height: 300px;
-=======
-    height: 300px; /* Adjust for smaller screens */
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
   }
 
   .banner-content h1 {
@@ -1384,7 +969,6 @@ footer {
     padding: 10px;
   }
 }
-<<<<<<< HEAD
 
 /* Advantages */
 .unique-advantages-section {
@@ -1506,8 +1090,107 @@ footer {
 }
 
 
+.all-faq-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f3f3f3 50%, #e5e5e5 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
 
+.all-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
 
+/* Two-column grid for FAQs */
+.all-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+.all-faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.all-faq-item:hover {
+  transform: scale(1.02);
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+}
+
+.all-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+}
+
+.all-faq-icon {
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.all-active .all-faq-icon {
+  transform: rotate(45deg);
+}
+
+.all-faq-answer {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  max-height: 200px;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.all-faq-item:before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #18B2D3;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.all-active:before {
+  transform: scaleX(1);
+}
+
+.all-active .all-faq-answer {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.all-faq-answer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .all-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}

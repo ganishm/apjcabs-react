@@ -1,11 +1,8 @@
 import { useState } from 'react';
-<<<<<<< HEAD
+
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBus, faCar, faShieldAlt, faUserTie, faMapSigns, faShip, faHome, faRoute } from '@fortawesome/free-solid-svg-icons';
-=======
-import { useNavigate } from 'react-router-dom'; 
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+import { faRoute, faCar, faShieldAlt, faHome, faMapSigns, faUserTie, faBus, faShip, faHelicopter, faPlane } from '@fortawesome/free-solid-svg-icons'; // Ensure you import the relevant icons
 import './Home.css'; // Custom CSS
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -16,36 +13,55 @@ import "slick-carousel/slick/slick-theme.css";
 
 const HeroSection = () => {
 
-    const responsiveOptionsAdventure = {
-        0: {
-            items: 1,
-            stagePadding: 60,
-        },
-        600: {
-            items: 1,
-            stagePadding: 100,
-        },
-        1000: {
-            items: 1,
-            stagePadding: 100,
-        },
-        1200: {
-            items: 1,
-            stagePadding: 200,
-        },
-        1400: {
-            items: 1,
-            stagePadding: 200,
-        },
-        1600: {
-            items: 1,
-            stagePadding: 200,
-        },
-        1800: {
-            items: 1,
-            stagePadding: 200,
-        },
-    };
+    const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqs = [
+    { question: "What is your car rental process?", answer: "The process is simple: Select your car, choose the rental period, provide your details, and pick up the car at your desired location." },
+    { question: "What documents do I need?", answer: "You need to present a valid driver's license and a government-issued ID card." },
+    { question: "Are there any extra charges for late returns?", answer: "Yes, we charge an additional fee based on the extra hours or days beyond your rental period." },
+    { question: "Can I cancel my booking?", answer: "Cancellations are allowed up to 24 hours before the rental period. Please refer to our cancellation policy for more details." },
+    { question: "Is there a mileage limit?", answer: "Yes, each car comes with a daily mileage limit. Additional charges may apply for extra miles." },
+    { question: "Do you provide roadside assistance?", answer: "Yes, we provide 24/7 roadside assistance during the rental period." },
+    { question: "How do I extend my rental period?", answer: "You can extend the rental period by contacting our support team before your return time." },
+    { question: "What payment methods are accepted?", answer: "We accept all major credit cards, debit cards, and online payments." },
+    { question: "Can I rent a car without a driver?", answer: "Yes, we offer both self-drive and chauffeur-driven rental options." },
+    { question: "Is insurance included in the rental?", answer: "Yes, all cars come with basic insurance. Additional coverage options are also available." }
+  ];
+
+    // const responsiveOptionsAdventure = {
+    //     0: {
+    //         items: 1,
+    //         stagePadding: 60,
+    //     },
+    //     600: {
+    //         items: 1,
+    //         stagePadding: 100,
+    //     },
+    //     1000: {
+    //         items: 1,
+    //         stagePadding: 100,
+    //     },
+    //     1200: {
+    //         items: 1,
+    //         stagePadding: 200,
+    //     },
+    //     1400: {
+    //         items: 1,
+    //         stagePadding: 200,
+    //     },
+    //     1600: {
+    //         items: 1,
+    //         stagePadding: 200,
+    //     },
+    //     1800: {
+    //         items: 1,
+    //         stagePadding: 200,
+    //     },
+    // };
 
 
     const responsiveOptionsCustomerSay = {
@@ -64,92 +80,87 @@ const HeroSection = () => {
     const [activeTab, setActiveTab] = useState('all');
 
     const cars = [
-<<<<<<< HEAD
-        { id: 1, type: 'luxury_sedan', name: 'Mercedes', car_model:'Benz S Class',img_path:'/img/cars/benz_s_class_new.png'},
-        { id: 2, type: 'luxury_sedan', name: 'Jaguar', car_model:'Xf' ,img_path:'/img/cars/jaguar_xf.png'},
-        { id: 3, type: 'luxury_sedan', name: 'Jaguar', car_model:'XJL' ,img_path:'/img/cars/jaguar-xjl.png'},
-        { id: 4, type: 'luxury_sedan', name: 'Rolls Royce', car_model:'Ghost',img_path:'/img/cars/rr_ghost.png' },
-        { id: 5, type: 'luxury_sedan', name: 'Audi', car_model:' A6',img_path:'/img/cars/audi_a6.png' },
-        { id: 6, type: 'luxury_sedan', name: 'BMW', car_model:' 5 Series',img_path:'/img/cars/5series.png' },
-        { id: 7, type: 'luxury_sedan', name: 'Mercedes', car_model:'Benz E Class',img_path:'/img/cars/benzelass.png' },
-        { id: 8, type: 'luxury_sedan', name: 'Audi', car_model:' A3 Convertible',img_path:'/img/cars/audia3.png' },
-        { id: 9, type: 'luxury_sedan', name: 'BMW', car_model:' 7 Series',img_path:'/img/cars/7series.png' },
-        { id: 10, type: 'toyota', name: 'Toyota', car_model:'Velfire',img_path:'/img/cars/velfire.png' },
-        { id: 11, type: 'toyota', name: 'Toyota', car_model:'Innova Crysta G',img_path:'/img/cars/toyato_innova_crysta_g_model.png' },
-        { id: 12, type: 'toyota', name: 'Toyota', car_model:'Innova Crysta Z',img_path:'/img/cars/toy_inn_crysta_z_model.png' },
-        { id: 13, type: 'toyota', name: 'Toyota', car_model:' Fortuner',img_path:'/img/cars/toy_fortuner.png' },
-        { id: 14, type: 'toyota', name: 'Toyota', car_model:' Innova Hycross Hybrid',img_path:'/img/cars/hycrosshybrid.png' },
-        { id: 15, type: 'toyota', name: 'Toyota', car_model:' Innova Hycross',img_path:'/img/cars/hycrosspetrol.png' },
-        { id: 16, type: 'toyota', name: 'Toyota', car_model:' Commuter',img_path:'/img/cars/commuter.png' },
-        { id: 17, type: '6/7_seater', name: 'Mercedes', car_model:' Benz V Class',img_path:'/img/cars/vclass.png' },
-        { id: 18, type: '6/7_seater', name: 'Mercedes', car_model:' GLS 450D',img_path:'/img/cars/450d.png' },
-        { id: 19, type: '6/7_seater', name: 'Audi', car_model:'Q7' ,img_path:'/img/cars/q7.png' },
-        { id: 20, type: '6/7_seater', name: 'Toyota', car_model:' Innova Hycross Hybrid',img_path:'/img/cars/hycrosshybrid.png' },
-        { id: 21, type: '6/7_seater', name: 'Toyota', car_model:' Innova Hycross',img_path:'/img/cars/hycrosspetrol.png' },
-        { id: 22, type: '6/7_seater', name: 'Toyota', car_model:'Innova Crysta G',img_path:'/img/cars/toyato_innova_crysta_g_model.png' },
-        { id: 23, type: '6/7_seater', name: 'Toyota', car_model:'Innova Crysta Z',img_path:'/img/cars/toy_inn_crysta_z_model.png' },
-        { id: 24, type: '6/7_seater', name: 'Toyota', car_model:' Fortuner',img_path:'/img/cars/toy_fortuner.png' },
-        { id: 25, type: '6/7_seater', name: 'Toyota', car_model:'Velfire',img_path:'/img/cars/velfire.png' },
-        { id: 26, type: 'mpv', name: 'Tempo', car_model:' Traveller',img_path:'/img/cars/tempo.png' },
-        { id: 27, type: 'mpv', name: 'Urbania',img_path:'/img/cars/urbania.png' },
-        { id: 28, type: 'mpv', name: 'Toyota', car_model:' Commuter',img_path:'/img/cars/commuter.png' },        
-        { id: 29, type: 'bus', name: 'Volvo', car_model:' Bus',img_path:'/img/cars/volvo_bus.png' },
-        { id: 30, type: 'bus', name: 'Benz', car_model:' Bus',img_path:'/img/cars/bezbus.png' },
-        { id: 31, type: 'bus', name: 'Leyland', car_model:' Bus',img_path:'/img/cars/40seater.png' },
-        { id: 32, type: 'bus', name: 'Leyland', car_model:' Bus',img_path:'/img/cars/40seater.png' },
+        { id: 1, type: 'luxury_sedan', name: 'Mercedes', car_model:'Benz S Class',img_path:'/img/cars/benz_s_class_new.png', prize:'₹25,000', hours:'8 Hour and 80 Kms', people:'4 peoples', rent:'/benzs'}, 
+        { id: 2, type: 'luxury_sedan', name: 'Jaguar', car_model:'Xf' ,img_path:'/img/cars/jaguar_xf.png', prize:'₹7000', hours:'4 Hour and 40 Kms',people:'4 peoples', rent:'/jaguarxf'},
+        { id: 3, type: 'luxury_sedan', name: 'Jaguar', car_model:'XJL' ,img_path:'/img/cars/jaguar-xjl.png', prize:'₹20000', hours:'8 Hour and 80 Kms', people:'4 peoples', rent:'/jaguarxlj'},
+        { id: 4, type: 'luxury_sedan', name: 'Rolls Royce', car_model:'Ghost',img_path:'/img/cars/rr_ghost.png', prize:'₹100000', hours:'8 Hour and 80 Kms',people:'4 peoples', rent:'/rollsroyce' },
+        { id: 5, type: 'luxury_sedan', name: 'Audi', car_model:' A6',img_path:'/img/cars/audi_a6.png', prize:'₹6000', hours:'4 Hours and 40 Kms',people:'4 peoples', rent:'/audia6' },
+        { id: 6, type: 'luxury_sedan', name: 'BMW', car_model:' 5 Series',img_path:'/img/cars/5series.png',  prize:'₹6000', hours:'4 Hours and 40 Kms',people:'4 peoples', rent:'/bmw5series' },
+        { id: 7, type: 'luxury_sedan', name: 'Mercedes', car_model:'Benz E Class',img_path:'/img/cars/benzelass.png', prize:'₹6000', hours:'4 Hours and 40 Kms',people:'4 peoples' , rent:'/benze'},
+        { id: 8, type: 'luxury_sedan', name: 'Audi', car_model:' A3 Convertible',img_path:'/img/cars/audia3.png',people:'4 peoples',  },
+        { id: 9, type: 'luxury_sedan', name: 'BMW', car_model:' 7 Series',img_path:'/img/cars/7series.png',people:'4 peoples',  },
+        { id: 10, type: 'toyota', name: 'Toyota', car_model:'Velfire',img_path:'/img/cars/velfire.png', prize:'₹22000', hours:'8 Hours and 80 Kms',people:'6 peoples', rent:'/velfire' },
+        { id: 11, type: 'toyota', name: 'Toyota', car_model:'Innova Crysta G',img_path:'/img/cars/toyato_innova_crysta_g_model.png', prize:'₹2200', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/crystag' },
+        { id: 12, type: 'toyota', name: 'Toyota', car_model:'Innova Crysta Z',img_path:'/img/cars/toy_inn_crysta_z_model.png', prize:'₹4800', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/crystaz' },
+        { id: 13, type: 'toyota', name: 'Toyota', car_model:' Fortuner',img_path:'/img/cars/toy_fortuner.png', prize:'₹4000', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/fortuner'},
+        { id: 14, type: 'toyota', name: 'Toyota', car_model:' Innova Hycross Hybrid',img_path:'/img/cars/hycrosshybrid.png',people:'6 peoples',  },
+        { id: 15, type: 'toyota', name: 'Toyota', car_model:' Innova Hycross',img_path:'/img/cars/hycrosspetrol.png' ,people:'6 peoples', },
+        { id: 16, type: 'toyota', name: 'Toyota', car_model:' Commuter',img_path:'/img/cars/commuter.png',people:'6 peoples',  },
+        { id: 17, type: '6/7_seater', name: 'Mercedes', car_model:' Benz V Class',img_path:'/img/cars/vclass.png',people:'6 peoples',  },
+        { id: 18, type: '6/7_seater', name: 'Mercedes', car_model:' GLS 450D',img_path:'/img/cars/450d.png' ,people:'6 peoples', },
+        { id: 19, type: '6/7_seater', name: 'Audi', car_model:'Q7' ,img_path:'/img/cars/q7.png', prize:'₹9000', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/audiq7'},
+        { id: 20, type: '6/7_seater', name: 'Toyota', car_model:' Innova Hycross Hybrid',img_path:'/img/cars/hycrosshybrid.png',people:'6 peoples',  },
+        { id: 21, type: '6/7_seater', name: 'Toyota', car_model:' Innova Hycross',img_path:'/img/cars/hycrosspetrol.png' ,people:'6 peoples', },
+        { id: 22, type: '6/7_seater', name: 'Toyota', car_model:'Innova Crysta G',img_path:'/img/cars/toyato_innova_crysta_g_model.png', prize:'₹2200', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/crystag' },
+        { id: 23, type: '6/7_seater', name: 'Toyota', car_model:'Innova Crysta Z',img_path:'/img/cars/toy_inn_crysta_z_model.png', prize:'₹4800', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/crystaz' },
+        { id: 24, type: '6/7_seater', name: 'Toyota', car_model:' Fortuner',img_path:'/img/cars/toy_fortuner.png', prize:'₹4000', hours:'4 Hours and 40 Kms',people:'6 peoples', rent:'/fortuner' },
+        { id: 25, type: '6/7_seater', name: 'Toyota', car_model:'Velfire',img_path:'/img/cars/velfire.png', prize:'₹22000', hours:'8 Hours and 80 Kms',people:'6 peoples',rent:'/velfire' },
+        { id: 26, type: 'mpv', name: 'Tempo', car_model:' Traveller',img_path:'/img/cars/tempo.png',people:'12 peoples', },
+        { id: 27, type: 'mpv', name: 'Urbania',img_path:'/img/cars/urbania.png',people:'10 peoples', },
+        { id: 28, type: 'mpv', name: 'Toyota', car_model:' Commuter',img_path:'/img/cars/commuter.png',people:'7 peoples', },        
+        { id: 29, type: 'bus', name: 'Volvo', car_model:' Bus',img_path:'/img/cars/volvo_bus.png', prize:'₹23500', hours:'1 day With in Chennai 300 kms' ,people:'28 peoples',rent:'/volvo' },
+        { id: 30, type: 'bus', name: 'Benz', car_model:' Bus',img_path:'/img/cars/bezbus.png',people:'28 peoples', },
+        { id: 31, type: 'bus', name: 'Leyland', car_model:' Bus',img_path:'/img/cars/40seater.png',people:'30 peoples', },
+        { id: 32, type: 'bus', name: 'Leyland', car_model:' Bus',img_path:'/img/cars/40seater.png',people:'48 peoples', },
         { id: 33, type: 'flying', name: 'Helicoptor', car_model:' Bell',img_path:'/img/cars/bell_hel.png' },
         { id: 34, type: 'flying', name: 'Helicoptor', car_model:' Augusta',img_path:'/img/cars/aug_hel.png' },
         { id: 35, type: 'flying', name: 'Private Jet', car_model:' Hawker',img_path:'/img/cars/hawker.png' },
+        { id: 36, type: 'benz', name: 'Mercedes', car_model:'Benz S Class',img_path:'/img/cars/benz_s_class_new.png', prize:'₹25,000', hours:'8 Hour and 80 Kms',people:'4 peoples',rent:'/benzs'},
+        { id: 37, type: 'benz', name: 'Mercedes', car_model:'Benz E Class',img_path:'/img/cars/benzelass.png', prize:'₹6000', hours:'4 Hours and 40 Kms',people:'4 peoples',rent:'/benze' },
+        { id: 38, type: 'benz', name: 'Mercedes', car_model:' Benz V Class',img_path:'/img/cars/vclass.png',people:'6 peoples', },
+        { id: 39, type: 'benz', name: 'Mercedes', car_model:' GLS 450D',img_path:'/img/cars/450d.png' ,people:'6 peoples',},
+        { id: 40, type: 'audi', name: 'Audi', car_model:' A6',img_path:'/img/cars/audi_a6.png',  prize:'₹6000', hours:'4 Hours and 40 Kms',people:'4 peoples',rent:'/audia6' },
+        { id: 41, type: 'audi', name: 'Audi', car_model:' A3 Convertible',img_path:'/img/cars/audia3.png',people:'4 peoples', },
+        { id: 42, type: 'audi', name: 'Audi', car_model:'Q7' ,img_path:'/img/cars/q7.png',prize:'₹9000', hours:'4 Hours and 40 Kms',people:'6 peoples',rent:'audiq7' },
+        { id: 43, type: 'jaguar', name: 'Jaguar', car_model:'Xf' ,img_path:'/img/cars/jaguar_xf.png', prize:'₹7000', hours:'4 Hour and 40 Kms',people:'4 peoples',rent:'/jaguarxf'},
+        { id: 44, type: 'jaguar', name: 'Jaguar', car_model:'XJL' ,img_path:'/img/cars/jaguar-xjl.png', prize:'₹20000', hours:'8 Hour and 80 Kms',people:'4 peoples',rent:'/jaguarxlj'},
+        { id: 45, type: 'bmw', name: 'BMW', car_model:' 5 Series',img_path:'/img/cars/5series.png', prize:'₹6000', hours:'4 Hours and 40 Kms',people:'4 peoples',rent:'/bmw5series' },
+        { id: 46, type: 'bmw', name: 'BMW', car_model:' 7 Series',img_path:'/img/cars/7series.png' ,people:'4 peoples', },
+        { id: 47, type: 'force', name: 'Tempo', car_model:' Traveller',img_path:'/img/cars/tempo.png',people:'12 peoples',  },
+        { id: 48, type: 'volvo_bus', name: 'Volvo', car_model:' Bus',img_path:'/img/cars/volvo_bus.png',prize:'₹23500', hours:'1 day With in Chennai 300 kms',people:'28 peoples',rent:'/volvo' },
+        { id: 49, type: 'bhart_benz_bus', name: 'Benz', car_model:' Bus',img_path:'/img/cars/bezbus.png',people:'28 peoples',  },
+        { id: 50, type: 'ashok_leyland_bus', name: 'Leyland', car_model:' Bus',img_path:'/img/cars/40seater.png',people:'28 peoples',  },
+        { id: 51, type: 'ashok_leyland_bus', name: 'Leyland', car_model:' Bus',img_path:'/img/cars/40seater.png',people:'40 peoples',  },
+
         // { id: 9, type: 'seven_seater', name: 'Toyota', car_model:' Innova',img_path:'/img/cars/toyota_innova.png' },
         // { id: 11, type: 'seven_seater', name: 'KIA', car_model:' Carnival',img_path:'/img/cars/kiacarnival.png' },
         // { id: 12, type: 'five_seater', name: 'Toyota', car_model:' Corolla Altis',img_path:'/img/cars/toyota_corolla_altis.png' },
         // { id: 13, type: 'five_seater', name: 'Toyota', car_model:' Camry Hybrid',img_path:'/img/cars/toyotocarmyhybrid.png' },
-        
-=======
-        { id: 1, type: 'luxury', name: 'Mercedes', car_model:'Benz S Class',img_path:'/img/cars/benz_s_class_new.png'},
-        { id: 2, type: 'luxury', name: 'Jaguar', car_model:'Xf' ,img_path:'/img/cars/jaguar_xf.png'},
-        { id: 3, type: 'luxury', name: 'Jaguar', car_model:'XJL' ,img_path:'/img/cars/jaguar-xjl.png'},
-        { id: 4, type: 'luxury', name: 'Rolls Royce', car_model:'Ghost',img_path:'/img/cars/rr_ghost.png' },
-        { id: 5, type: 'seven_seater', name: 'Audi', car_model:'Q7' ,img_path:'/img/cars/audi-q7.png' },
-        { id: 6, type: 'seven_seater', name: 'Toyota', car_model:'Velfire',img_path:'/img/cars/toyota_vellfire.png' },
-        { id: 7, type: 'seven_seater', name: 'Toyota', car_model:'Innova Crysta G',img_path:'/img/cars/toyato_innova_crysta_g_model.png' },
-        { id: 8, type: 'seven_seater', name: 'Toyota', car_model:'Innova Crysta Z',img_path:'/img/cars/toy_inn_crysta_z_model.png' },
-        { id: 9, type: 'seven_seater', name: 'Toyota', car_model:' Innova',img_path:'/img/cars/toyota_innova.png' },
-        { id: 10, type: 'seven_seater', name: 'Toyota', car_model:' Fortuner',img_path:'/img/cars/toy_fortuner.png' },
-        { id: 11, type: 'seven_seater', name: 'KIA', car_model:' Carnival',img_path:'/img/cars/kiacarnival.png' },
-        { id: 12, type: 'five_seater', name: 'Toyota', car_model:' Corolla Altis',img_path:'/img/cars/toyota_corolla_altis.png' },
-        { id: 13, type: 'five_seater', name: 'Toyota', car_model:' Camry Hybrid',img_path:'/img/cars/toyotocarmyhybrid.png' },
-        { id: 14, type: 'five_seater', name: 'Audi', car_model:' A6',img_path:'/img/cars/audi_a6.png' },
-        { id: 15, type: 'five_seater', name: 'BMW', car_model:' 5 Series',img_path:'/img/cars/bmw-5-series.png' },
-        { id: 16, type: 'five_seater', name: 'Mercedes ', car_model:'Benz E Class',img_path:'/img/cars/benzelass.png' },
-        { id: 17, type: 'bus', name: 'Volvo', car_model:' Bus',img_path:'/img/cars/volvo_bus.png' },
-        { id: 18, type: 'yacht', name: 'Yacht',img_path:'/img/cars/yatch.png' },
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
     ];
 
     const tabs = [
         { name: 'All', filter: 'all' },
-<<<<<<< HEAD
         { name: 'Toyota', filter: 'toyota' },
+        { name: 'Benz', filter:'benz' },
+        { name: 'Audi', filter: 'audi' },
+        { name: 'BMW', filter: 'bmw' },
+        { name: 'Jaguar', filter: 'jaguar' },
+        { name: 'Force', filter: 'force' },
+        { name: 'Volvo Bus', filter: 'volvo_bus' },
+        { name: 'Bhart Benz Bus', filter: 'bhart_benz_bus' },
+        { name: 'Ashok Leyland Bus', filter: 'ashok_leyland_bus' },
         { name: 'Luxury Sedan', filter: 'luxury_sedan' },
         { name: '6/7 Seater', filter: '6/7_seater' },
         { name: 'MPV', filter: 'mpv' },
         { name: 'Bus', filter: 'bus' },
         { name: 'Flying', filter: 'flying' },
-=======
-        { name: 'Luxury', filter: 'luxury' },
-        { name: '7 Seater', filter: 'seven_seater' },
-        { name: '5 Seater', filter: 'five_seater' },
-        { name: 'Bus', filter: 'bus' },
-        { name: 'Yacht', filter: 'yacht' },
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
     ];
 
     const handleTabClick = (filter) => {
         setActiveTab(filter);
     };
 
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         choose_location: '',
         from_date: '',
@@ -198,12 +209,8 @@ const HeroSection = () => {
                 from_date: '',
                 to_date: ''
             });
-<<<<<<< HEAD
             // Navigate to the tariff page
-            navigate('/tariff'); // Navigate to the tariff page
-=======
             navigate('/tariff'); 
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
         } else {
             // Set validation errors to state
             setErrors(validationErrors);
@@ -238,11 +245,8 @@ const HeroSection = () => {
         speed: 500, // Speed of slide transition
         slidesToShow: 1,
         slidesToScroll: 1,
-<<<<<<< HEAD
-        autoplay: true, // Enable autoplay
-=======
-        autoplay: false, // Enable autoplay
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+
+        autoplay: true, 
         autoplaySpeed: 3000, // Time between slides in milliseconds (3 seconds)
         arrows: true, // Enable left/right arrows
         nextArrow: <NextArrow />, // Custom arrow components
@@ -254,17 +258,14 @@ const HeroSection = () => {
             title: "First Banner Title",
             description: "This is the description for the first banner.",
             buttonText: "Learn More",
-<<<<<<< HEAD
+
             imageUrl: "/images/banner/banner1.png",
-=======
-            imageUrl: "/images/banner/redcar.png", // Replace with your image
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
         },
         {
             title: "Second Banner Title",
             description: "This is the description for the second banner.",
             buttonText: "Discover More",
-<<<<<<< HEAD
+
             imageUrl: "/images/banner/banner2.png",
         },
         {
@@ -303,69 +304,101 @@ const HeroSection = () => {
         {
           title: "Tirupathi Package",
           description: "Are you visiting the renowned Tirupathi temple from Chennai? Take a look at our Chennai to Tirupathi car rental packages.",
-          icon: faRoute
+          icon: faRoute,
+          href: "/services#tirupati-package"
         },
         {
           title: "VIP Transportation for Tirupathi Darshan",
           description: "We understand the need for privacy along with luxury when it comes to providing transportation for VIPs.",
-          icon: faCar
+          icon: faCar,
+          href: "/services#vip-transportation-tirupati",
         },
         {
           title: "Bouncer Services",
           description: "Security is a real concern nowadays and we know that VIP events cannot take place without ample security measures.",
-          icon: faShieldAlt
+          icon: faShieldAlt,
+          href: "/services#bouncer-services",
         },
         {
           title: "Serviced Apartments",
           description: "Whether it is a short stay or a long stay, we can arrange for the best serviced apartments in Chennai based on your requirements.",
-          icon: faHome
+          icon: faHome,
+          href: "/services#serviced-apartments",
         },
         {
           title: "South India Tour",
           description: "While we do offer South India tour car rentals, we also have South India tour packages starting from Chennai.",
-          icon: faMapSigns
+          icon: faMapSigns,
+          href: "/services#south-india-tour",
         },
         {
           title: "Guide Facilities",
           description: "Tourists form a major chunk of our customers and they prefer to go for car rentals with a guide.",
-          icon: faUserTie
+          icon: faUserTie,
+          href: "/services#guide-facilities",
         },
         {
           title: "Bus Rental",
           description: "Chartered Volvo Buses and Leyland Buses Available for Tours and Group Transportation.",
-          icon: faBus
+          icon: faBus,
+          href: "/services#bus-rental",
         },
         {
           title: "Yacht Rental",
           description: "Celebrate your Special Occasion or Get-togethers in a Luxury Yacht in Chennai. 15 and 60 pax Capacity Served along with food.",
-          icon: faShip
+          icon: faShip,
+          href: "/services#yacht-rental",
+        },
+        {
+          title: "Event Transportation",
+          description: "Chartered Volvo Buses and Leyland Buses Available for Tours and Group Transportation.",
+          icon: faCar,
+          href: "/services#event-transportation",
+        },
+        {
+          title: "VIP Transportation",
+          description: "Celebrate your Special Occasion or Get-togethers in a Luxury Yacht in Chennai. 15 and 60 pax Capacity Served along with food.",
+          icon: faCar,
+          href: "/services#vip-transportation",
+        },
+        {
+          title: "Corporate Car Rental",
+          description: "Chartered Volvo Buses and Leyland Buses Available for Tours and Group Transportation.",
+          icon: faCar,
+          href: "/services#corporate-car-hire",
+        },
+        {
+          title: "Self Drive Car Rental",
+          description: "Celebrate your Special Occasion or Get-togethers in a Luxury Yacht in Chennai. 15 and 60 pax Capacity Served along with food.",
+          icon: faCar,
+          href: "/services#self-drive-car-rental",
+        },
+        {
+          title: "Employee Transportation",
+          description: "Chartered Volvo Buses and Leyland Buses Available for Tours and Group Transportation.",
+          icon: faBus,
+          href: "/services#employee-transportation",
+        },
+        {
+          title: "Bridal Car Rental",
+          description: "Celebrate your Special Occasion or Get-togethers in a Luxury Yacht in Chennai. 15 and 60 pax Capacity Served along with food.",
+          icon: faCar,
+          href: "/services#bridal-car-rental",
+        },
+        {
+          title: "Helicoptor Rental",
+          description: "Chartered Volvo Buses and Leyland Buses Available for Tours and Group Transportation.",
+          icon: faHelicopter,
+          href: "/services#helicoptor-rental",
+        },
+        {
+          title: "Private Jet Rental",
+          description: "Celebrate your Special Occasion or Get-togethers in a Luxury Yacht in Chennai. 15 and 60 pax Capacity Served along with food.",
+          icon: faPlane,
+          href: "/services#private-jet-rental",
         },
       ];
 
-=======
-            imageUrl: "/images/banner/yatch.png",
-        },
-        {
-            title: "Second Banner Title",
-            description: "This is the description for the second banner.",
-            buttonText: "Discover More",
-            imageUrl: "/images/banner/wedcarr.png",
-        },
-        {
-            title: "Second Banner Title",
-            description: "This is the description for the second banner.",
-            buttonText: "Discover More",
-            imageUrl: "/images/banner/car.png",
-        },
-        {
-            title: "Second Banner Title",
-            description: "This is the description for the second banner.",
-            buttonText: "Discover More",
-            imageUrl: "/images/banner/busses.png",
-        },
-    ];
-
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
     return (
         <>
             {/* <!-- Banner --> */}
@@ -476,12 +509,48 @@ const HeroSection = () => {
             </section>
             {/* <!-- How it Works --> */}
 
+            {/* <div className="service-container">
+  <h2 className="service-popular-title">Popular <span className="text-primary">Services</span></h2>
+  <div className="service-card-container">
+    {cardData.map((card) => (
+      <a href={card.href} className="service-card-link" key={card.id}>
+        <div className="service-card">
+          <img src={card.image} alt={card.title} className="service-card-image" />
+          <h3 className="service-card-title">{card.title}</h3>
+          <p className="service-card-description">{card.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</div> */}
+
+{/* Popular Services */}
+
+<section className="unique-advantages-section">
+  <h2 className="advantage-section-title">Popular <span className="text-primary">Services</span></h2>
+  <div className="advantages-timeline">
+    {advantagesData.map((advantage, index) => (
+      <a href={advantage.href} className="service-card-link" key={index}> {/* Added the <a> tag here */}
+        <div key={index} className={`advantage-item ${index % 2 === 0 ? 'left-column' : 'right-column'}`}>
+          <div className="icon-container">
+            <FontAwesomeIcon icon={advantage.icon} className="advantage-icon" />
+          </div>
+          <div className="text-container">
+            <h3>{advantage.title}</h3>
+            <p>{advantage.description}</p>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
 
             {/* <!-- Trending Deals --> */}
             <section className="trending even_bg">
                 <div className="container">
 
-                    <h2>Trending Rental <span className="text-primary">Deals</span></h2>
+                    <h2>Fleet at <span className="text-primary">APJ</span></h2>
 
                     <p>Most Popular Car Rental Deals</p>
 
@@ -517,34 +586,27 @@ const HeroSection = () => {
                                         <p className="car-model">{car.car_model}</p>
                                     </div>
                                     <div className="right-info">
-                                        <h3 className="car-price">₹2000</h3>
-                                        <p className="car-hours">4 Hours</p>
+                                        <h3 className="car-price">{car.prize}</h3>
+                                        <p className="car-hours">{car.hours}</p>
                                     </div>
                                 </div>
-<<<<<<< HEAD
-                                {/* <div className="car-features">
-=======
-                                <div className="car-features">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+                                 <div className="car-features">
                                     <div className="feature">
                                         <i className="fas fa-users"></i>
-                                        <p>4 People</p>
+                                        <p>{car.people}</p>
                                     </div>
-                                    <div className="feature">
+                                    {/* <div className="feature">
                                         <i className="fas fa-users"></i>
                                         <p>Manual</p>
                                     </div>
                                     <div className="feature">
                                         <i className="fas fa-car"></i>
                                         <p>40L</p>
-                                    </div>
-<<<<<<< HEAD
-                                </div> */}
-                                <a href='/tariff'><button className="rent-button">Rent Now</button></a>
-=======
-                                </div>
-                                <button className="rent-button">Rent Now</button>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
+                                    </div> */}
+                                    <a href={car.rent}><button className="rent-button">Rent Now</button></a>
+
+                                </div> 
+                                
                             </div>
                         ))}
                     </div>
@@ -552,30 +614,10 @@ const HeroSection = () => {
             </section>
             {/* <!-- Trending Deals --> */}
 
-<<<<<<< HEAD
-            <section className="unique-advantages-section">
-      <h2 className="advantage-section-title">A.P.J Advantages</h2>
-      <div className="advantages-timeline">
-        {advantagesData.map((advantage, index) => (
-          <div key={index} className={`advantage-item ${index % 2 === 0 ? 'left-column' : 'right-column'}`}>
-            <div className="icon-container">
-              <FontAwesomeIcon icon={advantage.icon} className="advantage-icon" />
-            </div>
-            <div className="text-container">
-              <h3>{advantage.title}</h3>
-              <p>{advantage.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
 
             {/* <!-- Adventure --> */}
 
-            <section className="adventure odd_bg">
+            {/* <section className="adventure odd_bg">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-12">
@@ -730,20 +772,13 @@ const HeroSection = () => {
                             </div>
                         </div>
                         <div className="item black">
-<<<<<<< HEAD
+
                             <img src="./img/car_slider/bus_rental.png" alt="" />
-=======
-                            <img src="./img/car_slider/volvo.png" alt="" />
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                             <div className="inner">
                                 <div className="row">
                                     <div className="col-md-7">
                                         <div className="title">
-<<<<<<< HEAD
                                             Bus Rental
-=======
-                                            Volvo
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                         </div>
                                         <div className="options">
                                             <p><i className="fa-solid fa-door-open"></i>4 Seats</p>
@@ -752,11 +787,8 @@ const HeroSection = () => {
                                     </div>
                                     <div className="col-md-5">
                                         <div className="details">
-<<<<<<< HEAD
+
                                             <a href="#" className="btn btn-primary">Details</a>
-=======
-                                            <a href="/volvo" className="btn btn-primary">Details</a>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                             <div className="prices">
                                                 <h3>₹9000</h3>
                                                 <p>4 Hours</p>
@@ -766,46 +798,6 @@ const HeroSection = () => {
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-
-                        {/* <div className="item black">
-                            <img src="./img/car_slider/volvo.png" alt="" />
-=======
-                        <div className="item black">
-                            <img src="./img/car_slider/yatch.png" alt="" />
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-                            <div className="inner">
-                                <div className="row">
-                                    <div className="col-md-7">
-                                        <div className="title">
-<<<<<<< HEAD
-                                            Volvo
-=======
-                                            Yatch
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-                                        </div>
-                                        <div className="options">
-                                            <p><i className="fa-solid fa-door-open"></i>4 Seats</p>
-                                            <p><i className="fa-solid fa-list"></i>Auto</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-5">
-                                        <div className="details">
-<<<<<<< HEAD
-                                            <a href="/volvo" className="btn btn-primary">Details</a>
-=======
-                                            <a href="/yacht" className="btn btn-primary">Details</a>
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-                                            <div className="prices">
-                                                <h3>₹9000</h3>
-                                                <p>4 Hours</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-<<<<<<< HEAD
-                        </div> */}
                         <div className="item black">
                             <img src="./img/car_slider/celebrity.png" alt="" />
                             <div className="inner">
@@ -919,12 +911,10 @@ const HeroSection = () => {
                                     </div>
                                 </div>
                             </div>
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                         </div>
                     </OwlCarousel>
                 </div>
-            </section>
+            </section> */}
 
             {/* <!-- Adventure --> */}
 
@@ -1009,6 +999,31 @@ const HeroSection = () => {
                 </div>
             </section>
             {/* <!-- Choose US --> */}
+
+            {/* FAQ Section */}
+
+            <div className="all-faq-section">
+      <h2 className="all-title">Frequently Asked Questions</h2>
+      <div className="all-faq-grid">
+        {faqs.map((faq, index) => (
+          <div
+            className={`all-faq-item ${activeIndex === index ? "all-active" : ""}`}
+            key={index}
+            onClick={() => toggleFAQ(index)}
+          >
+            <div className="all-faq-question">
+              <span>{faq.question}</span>
+              <i className="all-faq-icon">{activeIndex === index ? "-" : "+"}</i>
+            </div>
+            {activeIndex === index && (
+              <div className="all-faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
 
 
             {/* <!-- Customer Say --> */}

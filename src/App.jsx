@@ -30,12 +30,11 @@ import Velfire from './components/CarDetails/Velfire/Velfire.jsx';
 import Volvo from './components/CarDetails/Volvo/Volvo.jsx';
 import Yacht from './components/CarDetails/Yacht/Yacht.jsx';
 import Chatbot from './components/Chatbot/Chatbot.jsx'
-<<<<<<< HEAD
 import SelfDrive from './components/SelfDrive/SelfDrive.jsx';
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
-        
+import Blog from './components/Blogs/Blog.jsx';
+import BlogPage from './components/BlogPage/BlogPage.jsx';
 
+        
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,15 +47,15 @@ function App() {
       }
     };
 
-    // Attach the event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return (<>
+  return (
+    
+    <>
   <Header/>
     <BrowserRouter>
       <Routes>
@@ -73,7 +72,7 @@ function App() {
         <Route path='/audiq7' element={<AudiQ7 />} />
         <Route path='/benze' element={<BenzE />} />
         <Route path='/benzs' element={<BenzS />} />
-        <Route path='/bmw' element={<Bmw />} />
+        <Route path='/bmw5series' element={<Bmw />} />
         <Route path='/camry' element={<Camry />} />
         <Route path='/carnival' element={<Carnival />} />
         <Route path='/crystag' element={<CrystaG />} />
@@ -87,6 +86,8 @@ function App() {
         <Route path='/volvo' element={<Volvo />} />
         <Route path='/yacht' element={<Yacht />} />
         <Route path='/self-drive' element={<SelfDrive />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blogs' element={<BlogPage/>}/>
       </Routes>
       </BrowserRouter>
       <Chatbot/>

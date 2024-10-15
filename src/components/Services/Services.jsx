@@ -1,8 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import "./Services.css";
 
 const Services = () => {
+    const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -100,7 +111,7 @@ const Services = () => {
 
             <section className="landing-section py-5">
                 <div className="container">
-                    <div className="row align-items-center ">
+                    <div id="corperate-transportation" className="row align-items-center ">
                         <div className="col-md-6 col-12">
                             <img src="/images/services/corporate_car_hire.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
@@ -111,11 +122,8 @@ const Services = () => {
                                 Long hours of work warrant comfort while travelling and our cars are apt to make big entrances during informal occasions too. Our luxury cars are often used by high-ranking business personnel. Some of our customers have been with us for years and we would love the opportunity to serve many more. Visit our Clients page to take a peek at our clientele.
                             </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -128,11 +136,8 @@ const Services = () => {
                             <p className="text-muted">
                                 We started wedding cars in 2009 and have successfully provided over 6500 services since then. We realize that it is a special day for more than the couple involved and everything has to go well especially transporting the bride and groom around. With courteous and understanding chauffeurs, our cars are completely equipped to comfortably transport the wedding party. Special floral decorations can be arranged, on request, so that the married couple can travel happily and lavishly.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -141,7 +146,7 @@ const Services = () => {
                             <img src="/images/services/wedding_cars.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
                     </div>
-                    <div className="row align-items-center  reverse" >
+                    <div id="event-transportation" className="row align-items-center  reverse" >
                         <div className="col-md-6 col-12">
                             <img src="/images/services/event_transportation.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
@@ -151,28 +156,22 @@ const Services = () => {
                             <p className="text-muted">
                                 Actors, VIPs and celebrities are frequent travelers who move around for work and leisure. They require nothing less than the best luxury transportation to take them to and from the airport or destinations within a city in accordance to their schedules. APJ cabs is the perfect pick for such requirements. Our staff is trained to cater to the demands of celebrities while on the move as their lifestyles demand attention to detail in everything. With safety, punctuality, courtesy and luxury in mind, we provide the best celebrity rides in Chennai.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className="row align-items-center " >
+                    <div id="vip-transportation" className="row align-items-center " >
                         <div className="col-md-6 col-12 text-content">
                             <h6 className="text-uppercase" >VIP Transportation</h6>
 
                             <p className="text-muted">
                                 Celebrities, famous personalities and all VIPs seek luxury and comfort when they travel as they travel a lot. Our aim is to give them the best while on the road. Whether it is work related or leisure travel, we have cars and transport facilities for all events. We offer convoy cars for protocol visits along with bouncers to accompany VVIPs on business tours. Our professional chauffeurs are well-trained and multilingual. They are adept at fulfilling our customers’ every request. All you have to do is sit back and relax.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -181,7 +180,7 @@ const Services = () => {
                             <img src="images/services/vip.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
                     </div>
-                    <div className="row align-items-center  reverse" >
+                    <div id="bus-rental" className="row align-items-center  reverse" >
                         <div className="col-md-6 col-12">
                             <img src="images/services/bus.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
@@ -191,11 +190,8 @@ const Services = () => {
                             <p className="text-muted">
                                 We know that it is better to hire buses rather than multiple cars when it comes to transporting a large crowd. That is why APJ cabs offer bus rentals. There are several occasions when one might want to transport large groups of people on multiple rides. We are prepared to handle the crowds and offer safe and convenient bus rides. Contact us to discuss your requirements so can offer you the best ride.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -208,11 +204,8 @@ const Services = () => {
                             <p className="text-muted">
                                 Special occasions come once in awhile and if you are looking to impress your loved ones, there is no better way than to give them a splendid ride in one of our luxury cars. Whether it is a birthday or an anniversary, this surprise is sure to overwhelm anyone. If you were looking for a unique idea to surprise someone, I think we just gave it to you.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -221,7 +214,7 @@ const Services = () => {
                             <img src="images/services/surprise.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
                     </div>
-                    <div className="row align-items-center  reverse" >
+                    <div id="yacht-rental" className="row align-items-center  reverse" >
                         <div className="col-md-6 col-12">
                             <img src="images/services/yacht.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
@@ -231,11 +224,8 @@ const Services = () => {
                             <p className="text-muted">
                                 Yachts are synonymous with luxury and they are often seen as the play toy for the uber rich. Take it for a personal spin or throw a private party for your special guests. If you want to hire an exquisite yacht, we can set you up with a beautiful one.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -248,11 +238,8 @@ const Services = () => {
                             <p className="text-muted">
                                 It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
                             <div className="buttons">
-<<<<<<< HEAD
+
                                 <a href="/tariff">
-=======
-                                <a href="../tariff/tariff.html">
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
                                     <button className="btn btn-primary my-btn">Rent Now</button>
                                 </a>
                             </div>
@@ -261,8 +248,8 @@ const Services = () => {
                             <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div className="row align-items-center reverse" >
+
+                    <div id="employee-transportation" className="row align-items-center reverse" >
                     <div className="col-md-6 col-12">
                             <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
                         </div>
@@ -279,9 +266,231 @@ const Services = () => {
                         </div>
                         
                     </div>
-=======
->>>>>>> 9a489bc7feb133706a14f3ed8f304b73cb2a4ff5
 
+                    <div id="bouncer-services" className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Bouncer Services</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
+
+                    <div className="row align-items-center reverse" >
+                    <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Hotel Bookings</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Flight Bookings</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
+
+                    <div id="guide-facilities" className="row align-items-center reverse" >
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Guide Services</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="corporate-car-hire" className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Corporate Transportation Consultancy</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
+                    <div id="private-jet-rental" className="row align-items-center reverse" >
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Private Jet Rentals</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="self-drive-car-rental" className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Self Drive Car Rentals</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
+                    <div id="bridal-car-rental" className="row align-items-center reverse" >
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Bridal Car Rentals</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="helicoptor-rentals" className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Helicoptor Rentals</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
+                    <div id="tirupati-package" className="row align-items-center reverse" >
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Tirupati Package</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="vip-transportation-tirupati" className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >VIP Transportation for Tirupathi Darshan</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
+                    <div id="serviced-apartments" className="row align-items-center reverse" >
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >Serviced Apartments</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="south-india-tour" className="row align-items-center " >
+                        <div className="col-md-6 col-12 text-content">
+                            <h6 className="text-uppercase" >South India Tour</h6>
+
+                            <p className="text-muted">
+                                It is often tiresome to find reliable airport car rental services in Chennai considering the traffic, peak hours and a host of other problems. Being experienced cab providers, we understand how timing matters while travelling to and from the airport. With our experienced drivers, concern for punctuality and the goal to get our customers to their destinations safely, we may be the best cab service when you need to catch a flight.                    </p>
+                            <div className="buttons">
+
+                                <a href="/tariff">
+                                    <button className="btn btn-primary my-btn">Rent Now</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-12">
+                            <img src="images/services/airport_car_rental.jpg" alt="Landing Image" className="img-fluid" />
+                        </div>
+                    </div>
                 </div>
             </section>
 
