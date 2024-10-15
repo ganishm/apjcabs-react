@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faCar, faShieldAlt, faHome, faMapSigns, faUserTie, faBus, faShip, faHelicopter, faPlane } from '@fortawesome/free-solid-svg-icons'; // Ensure you import the relevant icons
@@ -247,6 +248,8 @@ const HeroSection = () => {
         slidesToScroll: 1,
 
         autoplay: true, 
+
+        autoplay: true, 
         autoplaySpeed: 3000, // Time between slides in milliseconds (3 seconds)
         arrows: true, // Enable left/right arrows
         nextArrow: <NextArrow />, // Custom arrow components
@@ -259,12 +262,14 @@ const HeroSection = () => {
             description: "This is the description for the first banner.",
             buttonText: "Learn More",
 
+
             imageUrl: "/images/banner/banner1.png",
         },
         {
             title: "Second Banner Title",
             description: "This is the description for the second banner.",
             buttonText: "Discover More",
+
 
             imageUrl: "/images/banner/banner2.png",
         },
@@ -773,6 +778,7 @@ const HeroSection = () => {
                         </div>
                         <div className="item black">
 
+
                             <img src="./img/car_slider/bus_rental.png" alt="" />
                             <div className="inner">
                                 <div className="row">
@@ -787,6 +793,7 @@ const HeroSection = () => {
                                     </div>
                                     <div className="col-md-5">
                                         <div className="details">
+
 
                                             <a href="#" className="btn btn-primary">Details</a>
                                             <div className="prices">
